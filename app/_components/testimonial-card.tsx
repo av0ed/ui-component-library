@@ -16,7 +16,7 @@ export default function TestimonialCard({
   imageAlt,
 }: Props) {
   return (
-    <div className="max-w-[340px] max-h-[233px] w-full h-full p-6 bg-white flex flex-col rounded-lg shadow-md shadow-neutral-300 gap-4">
+    <div className="max-w-[340px] w-full p-6 bg-white flex flex-col rounded-lg shadow-md shadow-neutral-300 gap-4">
       <div className="flex flex-row gap-4">
         <Image
           src={imageSrc}
