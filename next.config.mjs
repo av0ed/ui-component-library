@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/ui-component-library",
   reactStrictMode: true,
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
