@@ -6,3 +6,5 @@ challenges](https://www.greatfrontend.com/projects). Description:
 > (GreatFrontEnd Projects) is a platform to build high quality project
 > challenges with beautiful & modular designs, guided by ex-FAANG senior
 > engineers and an active community.
+
+This project is mirrored on Github at: https://github.com/av0ed/ui-component-library
