@@ -1,17 +1,17 @@
 import Image from "next/image";
 
 interface Props {
-  author: string;
-  handle: string;
-  blurb: string;
+  name: string;
+  username: string;
+  testimonial: string;
   imageSrc: string;
   imageAlt: string;
 }
 
 export default function TestimonialCard({
-  author,
-  handle,
-  blurb,
+  name,
+  username,
+  testimonial,
   imageSrc,
   imageAlt,
 }: Props) {
@@ -26,11 +26,11 @@ export default function TestimonialCard({
           className="rounded-full"
         />
         <div className="flex flex-col">
-          <p className="text-neutral-900 text-lg font-semibold">{author}</p>
-          <p className="text-neutral-600 text-sm">{handle}</p>
+          <p className="text-neutral-900 text-lg font-semibold">{name}</p>
+          <p className="text-neutral-600 text-sm">{username}</p>
         </div>
       </div>
-      <p className="text-neutral-600 text-base line-clamp-6">{blurb}</p>
+      <p className="text-neutral-600 text-base line-clamp-6">{testimonial}</p>
     </div>
   );
 }
