@@ -3,7 +3,7 @@ import BlogCard from "../_components/blog-card";
 
 export default function BlogCardPage() {
   return (
-    <div className="flex justify-center mt-[200px]">
+    <div className="flex justify-center mt-[120px]">
       <Head>
         <title>Blog Card | UI Component Library | Jason Long</title>
       </Head>

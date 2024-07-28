@@ -19,7 +19,7 @@ export default function BlogCard({
   return (
     <article className="flex flex-col shadow-md bg-white rounded-lg w-[340px]">
       <Image
-        className="rounded-t-lg"
+        className="rounded-t-lg object-cover"
         src={imageSrc}
         alt={imageAlt}
         height={288}
