@@ -9,6 +9,7 @@ interface Props {
   imageAlt: string;
 }
 
+// TODO: later, the "pill" tag will be replaced by its own component.
 export default function BlogCard({
   headline,
   subHeadline,
@@ -16,7 +17,7 @@ export default function BlogCard({
   imageAlt,
 }: Props) {
   return (
-    <div className="flex flex-col shadow-md bg-white rounded-lg w-[340px]">
+    <article className="flex flex-col shadow-md bg-white rounded-lg w-[340px]">
       <Image
         className="rounded-t-lg"
         src={imageSrc}
@@ -34,12 +35,13 @@ export default function BlogCard({
         <p className="font-medium text-neutral-600 mt-3">{subHeadline}</p>
         <Link
           href="#"
+          aria-label="Read more about this blog post"
           className="inline-flex items-center mt-6 font-medium text-indigo-700 decoration-2 underline-offset-4 hover:underline"
         >
           Read more
           <MdOutlineArrowForward className="ml-1.5 h-5 w-5 fill-indigo-700" />
         </Link>
       </div>
-    </div>
+    </article>
   );
 }
