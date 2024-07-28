@@ -16,7 +16,7 @@ export default function TestimonialCard({
   imageAlt,
 }: Props) {
   return (
-    <div className="max-w-[340px] w-full h-fit p-6 bg-white flex flex-col rounded-lg shadow-md shadow-neutral-300 gap-4">
+    <figure className="max-w-[340px] w-full h-fit p-6 bg-white flex flex-col rounded-lg shadow-md shadow-neutral-300 gap-4">
       <div className="flex flex-row gap-4">
         <Image
           src={imageSrc}
@@ -30,7 +30,9 @@ export default function TestimonialCard({
           <p className="text-neutral-600 text-sm">{username}</p>
         </div>
       </div>
-      <p className="text-neutral-600 text-base line-clamp-6">{testimonial}</p>
-    </div>
+      <figcaption className="text-neutral-600 text-base line-clamp-6">
+        {testimonial}
+      </figcaption>
+    </figure>
   );
 }
