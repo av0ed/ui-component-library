@@ -1,8 +1,12 @@
+import Head from "next/head";
 import TestimonialCard from "../_components/testimonial-card";
 
 export default function TestimonialCardPage() {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-[200px]">
+      <Head>
+        <title>Testimonial Card | UI Component Library | Jason Long</title>
+      </Head>
       <TestimonialCard
         name="Sarah Dole"
         username="@sarahdole"

@@ -36,7 +36,7 @@ export default function BlogCard({
         <Link
           href="#"
           aria-label="Read more about this blog post"
-          className="inline-flex items-center mt-6 font-medium text-indigo-700 decoration-2 underline-offset-4 hover:underline"
+          className="inline-flex items-center mt-6 font-medium text-indigo-700 decoration-2 underline-offset-4 hover:text-indigo-800"
         >
           Read more
           <MdOutlineArrowForward className="ml-1.5 h-5 w-5 fill-indigo-700" />

@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${notoSans.className} mx-4 h-screen bg-gradient-to-r from-gray-50 from-0% to-[#D2D6DB] to-100% mt-[200px]`}
+        className={`${notoSans.className} mx-4 h-screen bg-gradient-to-r from-gray-50 from-10% to-[#D2D6DB] to-100%`}
       >
         {children}
       </body>
