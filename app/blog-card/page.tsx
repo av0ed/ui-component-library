@@ -1,12 +1,12 @@
-import Head from "next/head";
+import type { Metadata } from "next";
 import BlogCard from "../_components/blog-card";
 
+export const metadata: Metadata = {
+  title: "Blog Card | UI Component Library | Jason Long",
+};
 export default function BlogCardPage() {
   return (
     <div className="flex justify-center mt-[120px]">
-      <Head>
-        <title>Blog Card | UI Component Library | Jason Long</title>
-      </Head>
       <BlogCard
         headline="Top 5 Living Room Inspirations"
         subHeadline="Curated vibrants colors for your living, make it pop & calm in the same time."
