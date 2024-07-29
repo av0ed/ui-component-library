@@ -1,27 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
-import ButtonSocial from "../_components/button-social";
-import {
-  RiTwitterXFill,
-  RiInstagramFill,
-  RiGithubFill,
-  RiLinkedinBoxFill,
-} from "@remixicon/react";
 
 interface Props {
-  name: string;
-  role: string;
   blurb: string;
+  children: React.ReactNode;
   imageSrc: string;
   imageAlt: string;
+  name: string;
+  role: string;
 }
 
 export default function ProfileCard({
-  name,
-  role,
   blurb,
+  children,
   imageSrc,
   imageAlt,
+  name,
+  role,
 }: Props) {
   return (
     <div className="w-[340px] py-6 px-4 bg-white flex flex-col rounded-lg shadow-sm shadow-neutral-300 gap-y-10">
@@ -46,24 +41,7 @@ export default function ProfileCard({
         >
           Contact me
         </Link>
-        <div className="flex flex-row justify-center gap-x-4">
-          <ButtonSocial
-            Icon={RiGithubFill}
-            ariaLabel="Follow Sarah Dole on Github"
-          />
-          <ButtonSocial
-            Icon={RiLinkedinBoxFill}
-            ariaLabel="Follow Sarah Dole on LinkedIn"
-          />
-          <ButtonSocial
-            Icon={RiInstagramFill}
-            ariaLabel="Follow Sarah Dole on Instagram"
-          />
-          <ButtonSocial
-            Icon={RiTwitterXFill}
-            ariaLabel="Follow Sarah Dole on X"
-          />
-        </div>
+        {children}
       </div>
     </div>
   );
