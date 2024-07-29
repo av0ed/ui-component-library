@@ -1,4 +1,6 @@
+import Link from "next/link";
 import Image from "next/image";
+import ButtonSocial from "../_components/button-social";
 import {
   RiTwitterXFill,
   RiInstagramFill,
@@ -14,8 +16,7 @@ interface Props {
   imageAlt: string;
 }
 
-// Todo: butttons will later be replaced with components.
-export default function TestimonialCard({
+export default function ProfileCard({
   name,
   role,
   blurb,
@@ -39,22 +40,29 @@ export default function TestimonialCard({
         <p className="text-neutral-600 text-center line-clamp-6">{blurb}</p>
       </div>
       <div className="flex flex-col gap-y-6">
-        <button className="flex items-center justify-center self-stretch px-4 py-2.5 bg-indigo-700 text-white font-medium">
+        <Link
+          href="#"
+          className="flex items-center justify-center self-stretch rounded px-4 py-2.5 bg-indigo-700 text-white font-medium hover:bg-indigo-800 focus:outline-none focus:ring focus:ring-indigo-200"
+        >
           Contact me
-        </button>
+        </Link>
         <div className="flex flex-row justify-center gap-x-4">
-          <button className="p-2">
-            <RiGithubFill className="w-5 h-5 fill-indigo-700" />
-          </button>
-          <button className="p-2">
-            <RiLinkedinBoxFill className="w-5 h-5 fill-indigo-700" />
-          </button>
-          <button className="p-2">
-            <RiInstagramFill className="w-5 h-5 fill-indigo-700" />
-          </button>
-          <button className="p-2">
-            <RiTwitterXFill className="w-5 h-5 fill-indigo-700" />
-          </button>
+          <ButtonSocial
+            Icon={RiGithubFill}
+            ariaLabel="Follow Sarah Dole on Github"
+          />
+          <ButtonSocial
+            Icon={RiLinkedinBoxFill}
+            ariaLabel="Follow Sarah Dole on LinkedIn"
+          />
+          <ButtonSocial
+            Icon={RiInstagramFill}
+            ariaLabel="Follow Sarah Dole on Instagram"
+          />
+          <ButtonSocial
+            Icon={RiTwitterXFill}
+            ariaLabel="Follow Sarah Dole on X"
+          />
         </div>
       </div>
     </div>
