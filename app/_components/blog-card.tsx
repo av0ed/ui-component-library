@@ -26,7 +26,7 @@ export default function BlogCard({
         width={340}
       />
       <div className="px-4 py-6">
-        <span className="border border-green-200 bg-green-50 px-2 py-0.5 rounded-full">
+        <span className="inline-block border border-green-200 bg-green-50 px-2 py-0.5 rounded-full">
           <span className="text-sm text-green-700">Interior</span>
         </span>
         <p className="text-lg font-semibold text-neutral-900 mt-2">
