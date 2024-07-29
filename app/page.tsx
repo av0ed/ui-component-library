@@ -10,6 +10,9 @@ export default function Home() {
         <li>
           <Link href="/blog-card">Blog Card</Link>
         </li>
+        <li>
+          <Link href="/profile-card">Profile Card</Link>
+        </li>
       </ul>
     </main>
   );

@@ -17,6 +17,8 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-haze":
+          "linear-gradient(148deg, #F9FAFB 8.89%, #D2D6DB 100.48%)",
       },
       fontFamily: {
         sans: ["var(--font-noto-sans)"],

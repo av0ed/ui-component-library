@@ -1,4 +1,4 @@
-import { MdOutlineArrowForward } from "react-icons/md";
+import { RiArrowRightLine } from "@remixicon/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -39,7 +39,7 @@ export default function BlogCard({
           className="inline-flex items-center mt-6 font-medium text-indigo-700 decoration-2 underline-offset-4 hover:text-indigo-800"
         >
           Read more
-          <MdOutlineArrowForward className="ml-1.5 h-5 w-5 fill-indigo-700" />
+          <RiArrowRightLine className="ml-1.5 h-5 w-5 fill-indigo-700" />
         </Link>
       </div>
     </article>

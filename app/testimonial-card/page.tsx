@@ -1,12 +1,12 @@
-import Head from "next/head";
+import type { Metadata } from "next";
 import TestimonialCard from "../_components/testimonial-card";
 
+export const metadata: Metadata = {
+  title: "Testimonial Card | UI Component Library | Jason Long",
+};
 export default function TestimonialCardPage() {
   return (
     <div className="flex justify-center mt-[200px]">
-      <Head>
-        <title>Testimonial Card | UI Component Library | Jason Long</title>
-      </Head>
       <TestimonialCard
         name="Sarah Dole"
         username="@sarahdole"
