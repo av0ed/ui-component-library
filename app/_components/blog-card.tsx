@@ -1,4 +1,5 @@
 import { RiArrowRightLine } from "@remixicon/react";
+import Badge from "../_components/badge";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,7 +10,6 @@ interface Props {
   imageAlt: string;
 }
 
-// TODO: later, the "pill" tag will be replaced by its own component.
 export default function BlogCard({
   headline,
   subHeadline,
@@ -17,7 +17,7 @@ export default function BlogCard({
   imageAlt,
 }: Props) {
   return (
-    <article className="flex flex-col shadow-md bg-white rounded-lg w-[340px]">
+    <article className="flex flex-col border border-neutral-300 shadow-sm shadow-neutral-300 bg-white rounded-lg w-[340px]">
       <Image
         className="rounded-t-lg object-cover"
         src={imageSrc}
@@ -26,9 +26,7 @@ export default function BlogCard({
         width={340}
       />
       <div className="px-4 py-6">
-        <span className="inline-block border text-sm text-green-700 border-green-200 bg-green-50 px-2 py-[1px] font-normal rounded-full">
-          Interior
-        </span>
+        <Badge size="md" state="success" text="Interior" />
         <p className="text-lg font-semibold text-neutral-900 mt-2">
           {headline}
         </p>

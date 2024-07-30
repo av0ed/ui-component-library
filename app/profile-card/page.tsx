@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ProfileCard from "../_components/profile-card";
-import ButtonSocial from "../_components/button-social";
+import Button from "../_components/button";
 import {
   RiTwitterXFill,
   RiInstagramFill,
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 export default function ProfileCardPage() {
   return (
-    <div className="flex justify-center mt-[200px]">
+    <div className="flex justify-center items-start pt-[200px] h-screen bg-gradient-haze">
       <ProfileCard
         name="Sarah Dole"
         role="Front End Engineer @ Microsoft"
@@ -22,20 +22,20 @@ export default function ProfileCardPage() {
         imageAlt="Headshot of Sarah Dole"
       >
         <div className="flex flex-row justify-center gap-x-4">
-          <ButtonSocial
-            Icon={RiGithubFill}
+          <Button
+            IconRight={RiGithubFill}
             ariaLabel="Follow Sarah Dole on Github"
           />
-          <ButtonSocial
-            Icon={RiLinkedinBoxFill}
+          <Button
+            IconRight={RiLinkedinBoxFill}
             ariaLabel="Follow Sarah Dole on LinkedIn"
           />
-          <ButtonSocial
-            Icon={RiInstagramFill}
+          <Button
+            IconRight={RiInstagramFill}
             ariaLabel="Follow Sarah Dole on Instagram"
           />
-          <ButtonSocial
-            Icon={RiTwitterXFill}
+          <Button
+            IconRight={RiTwitterXFill}
             ariaLabel="Follow Sarah Dole on X"
           />
         </div>
