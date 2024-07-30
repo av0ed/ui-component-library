@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 export default function ButtonPage() {
   return (
     <div className="pt-[200px] h-screen">
-      <div className="flex flex-col justify-center items-start mx-auto gap-y-6 w-[240px]">
+      <div className="flex flex-col justify-center items-start mx-auto gap-y-12 w-[240px]">
         {buttonVariants.map((variant, idx) => (
           <div
             key={`${variant}_${idx}`}
-            className="flex flex-row items-center gap-x-6"
+            className="flex flex-row items-center gap-x-5"
           >
             {buttonSizes.map((size, jdx) => (
               <Button
