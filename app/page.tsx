@@ -13,6 +13,9 @@ export default function Home() {
         <li>
           <Link href="/profile-card">Profile Card</Link>
         </li>
+        <li>
+          <Link href="/badge">Badge</Link>
+        </li>
       </ul>
     </main>
   );

@@ -19,7 +19,7 @@ export default function ProfileCard({
   role,
 }: Props) {
   return (
-    <div className="w-[340px] py-6 px-4 bg-white flex flex-col rounded-lg shadow-sm shadow-neutral-300 gap-y-10">
+    <div className="w-[340px] py-6 px-4 border border-neutral-300 bg-white flex flex-col rounded-lg shadow-sm shadow-neutral-300 gap-y-10">
       <div className="flex flex-col items-center gap-y-6">
         <Image
           src={imageSrc}
@@ -28,7 +28,7 @@ export default function ProfileCard({
           width={64}
           className="rounded-full"
         />
-        <div className="flex flex-col items-center gap-y-1">
+        <div className="flex flex-col items-center">
           <p className="text-neutral-900 text-xl font-medium">{name}</p>
           <p className="text-neutral-600 text-sm">{role}</p>
         </div>
