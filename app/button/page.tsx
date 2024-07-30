@@ -1,25 +1,26 @@
 import type { Metadata } from "next";
-import Badge, { badgeSizes, badgeStates } from "../_components/badge";
+import Button, { buttonSizes, buttonVariants } from "../_components/button";
+import { RiStarLine } from "@remixicon/react";
 
 export const metadata: Metadata = {
   title: "Button | UI Component Library | Jason Long",
 };
 
-export default function BadgePage() {
+export default function ButtonPage() {
   return (
     <div className="pt-[200px] h-screen">
       <div className="flex flex-col justify-center items-start mx-auto gap-y-6 w-[240px]">
-        {badgeStates.map((state, idx) => (
+        {buttonVariants.map((variant, idx) => (
           <div
-            key={`${state}_${idx}`}
+            key={`${variant}_${idx}`}
             className="flex flex-row items-center gap-x-6"
           >
-            {badgeSizes.map((size, jdx) => (
-              <Badge
+            {buttonSizes.map((size, jdx) => (
+              <Button
                 key={`${size}_${jdx}`}
                 size={size}
-                state={state}
-                text="Label"
+                variant={variant}
+                Icon={RiStarLine}
               />
             ))}
           </div>

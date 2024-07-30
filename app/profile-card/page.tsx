@@ -8,9 +8,11 @@ import {
   RiLinkedinBoxFill,
 } from "@remixicon/react";
 
+// TODO: must fix buttons.
 export const metadata: Metadata = {
   title: "Profile Card | UI Component Library | Jason Long",
 };
+
 export default function ProfileCardPage() {
   return (
     <div className="flex justify-center items-start pt-[200px] h-screen bg-gradient-haze">
@@ -23,21 +25,24 @@ export default function ProfileCardPage() {
       >
         <div className="flex flex-row justify-center gap-x-4">
           <Button
-            IconRight={RiGithubFill}
+            Icon={RiGithubFill}
+            size="md"
+            variant="primary"
             ariaLabel="Follow Sarah Dole on Github"
           />
           <Button
-            IconRight={RiLinkedinBoxFill}
+            Icon={RiLinkedinBoxFill}
+            size="md"
+            variant="primary"
             ariaLabel="Follow Sarah Dole on LinkedIn"
           />
           <Button
-            IconRight={RiInstagramFill}
+            Icon={RiInstagramFill}
+            size="md"
+            variant="primary"
             ariaLabel="Follow Sarah Dole on Instagram"
           />
-          <Button
-            IconRight={RiTwitterXFill}
-            ariaLabel="Follow Sarah Dole on X"
-          />
+          <Button Icon={RiTwitterXFill} ariaLabel="Follow Sarah Dole on X" />
         </div>
       </ProfileCard>
     </div>
