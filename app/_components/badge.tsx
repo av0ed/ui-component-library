@@ -28,14 +28,20 @@ const style = {
 };
 
 interface Props {
+  ariaLabel?: string;
+  role?: string;
   size: BadgeSize;
   state: BadgeState;
   text: string;
 }
 
-export default function Badge({ size, state, text }: Props) {
+export default function Badge({ ariaLabel, role, size, state, text }: Props) {
   return (
-    <span className={`${style.base} ${style.size[size]} ${style.state[state]}`}>
+    <span
+      className={`${style.base} ${style.size[size]} ${style.state[state]}`}
+      role={role}
+      aria-label={ariaLabel}
+    >
       {text}
     </span>
   );
