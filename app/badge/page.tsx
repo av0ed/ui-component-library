@@ -7,22 +7,24 @@ export const metadata: Metadata = {
 
 export default function BadgePage() {
   return (
-    <div className="flex flex-col items-center gap-y-6 justify-center pt-[200px]">
-      {badgeStates.map((state, idx) => (
-        <div
-          key={`${state}_${idx}`}
-          className="flex flex-row items-center gap-x-6"
-        >
-          {badgeSizes.map((size, jdx) => (
-            <Badge
-              key={`${size}_${jdx}`}
-              size={size}
-              state={state}
-              text="Label"
-            />
-          ))}
-        </div>
-      ))}
+    <div className="pt-[200px] h-screen">
+      <div className="flex flex-col justify-center items-start mx-auto gap-y-6 w-[240px]">
+        {badgeStates.map((state, idx) => (
+          <div
+            key={`${state}_${idx}`}
+            className="flex flex-row items-center gap-x-6"
+          >
+            {badgeSizes.map((size, jdx) => (
+              <Badge
+                key={`${size}_${jdx}`}
+                size={size}
+                state={state}
+                text="Label"
+              />
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
