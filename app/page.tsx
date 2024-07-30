@@ -5,7 +5,10 @@ export default function Home() {
     <main>
       <ul>
         <li>
-          <Link href="/testimonial-card">Testimonial Card</Link>
+          <Link href="/404-section">404 Section</Link>
+        </li>
+        <li>
+          <Link href="/badge">Badge</Link>
         </li>
         <li>
           <Link href="/blog-card">Blog Card</Link>
@@ -14,10 +17,7 @@ export default function Home() {
           <Link href="/profile-card">Profile Card</Link>
         </li>
         <li>
-          <Link href="/badge">Badge</Link>
-        </li>
-        <li>
-          <Link href="/button">Button</Link>
+          <Link href="/testimonial-card">Testimonial Card</Link>
         </li>
       </ul>
     </main>
