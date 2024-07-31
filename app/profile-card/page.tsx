@@ -27,22 +27,27 @@ export default function ProfileCardPage() {
           <Button
             Icon={RiGithubFill}
             size="md"
-            variant="primary"
+            variant="tertiary"
             ariaLabel="Follow Sarah Dole on Github"
           />
           <Button
             Icon={RiLinkedinBoxFill}
             size="md"
-            variant="primary"
+            variant="tertiary"
             ariaLabel="Follow Sarah Dole on LinkedIn"
           />
           <Button
             Icon={RiInstagramFill}
             size="md"
-            variant="primary"
+            variant="tertiary"
             ariaLabel="Follow Sarah Dole on Instagram"
           />
-          <Button Icon={RiTwitterXFill} ariaLabel="Follow Sarah Dole on X" />
+          <Button
+            Icon={RiTwitterXFill}
+            size="md"
+            variant="tertiary"
+            ariaLabel="Follow Sarah Dole on X"
+          />
         </div>
       </ProfileCard>
     </div>

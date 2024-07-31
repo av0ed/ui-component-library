@@ -1,7 +1,12 @@
 import { RemixiconComponentType } from "@remixicon/react";
 
+type ButtonType = "btn" | "btn-link" | "btn-icon";
 type ButtonSize = "md" | "lg" | "xl" | "2xl";
 type ButtonVariant = "primary" | "secondary" | "tertiary" | "destructive";
+
+// button / size / variant
+// btn btn-2xl btn-primary
+// btn-link btn-link-md btn-link-primary
 
 export const buttonVariants: ButtonVariant[] = [
   "primary",
@@ -11,6 +16,8 @@ export const buttonVariants: ButtonVariant[] = [
 ];
 
 export const buttonSizes: ButtonSize[] = ["md", "lg", "xl", "2xl"];
+
+const classList = ["button", "link"];
 
 const style = {
   base: "inline-flex items-center justify-center rounded focus:outline-none focus:ring",
@@ -56,12 +63,14 @@ export default function Button({
 }: Props) {
   return (
     <button
-      className={`${style.base} ${style.size[size]} ${isDisabled ? style.disabled[variant] : style.variant[variant]}`}
-      tabIndex={isDisabled ? -1 : 0}
-      disabled={isDisabled}
       aria-disabled={isDisabled}
+      className={`${style.base} ${style.size[size]} ${isDisabled ? style.disabled[variant] : style.variant[variant]}`}
+      disabled={isDisabled}
+      tabIndex={isDisabled ? -1 : 0}
     >
-      <Icon aria-hidden="true" />
+      {Icon && <Icon aria-hidden="true" />}
+      {text}
+      {Icon && <Icon aria-hidden="true" />}
     </button>
   );
 }

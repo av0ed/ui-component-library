@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ButtonPage() {
   return (
-    <div className="pt-[200px] h-screen">
+    <div className="h-screen py-28 px-6 md:px-8 lg:px-0">
       <div className="flex flex-col justify-center items-start mx-auto gap-y-12 w-[240px]">
         {buttonVariants.map((variant, idx) => (
           <div
