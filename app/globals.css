@@ -5,7 +5,8 @@
 @layer components {
   /* Badges */
   .badge--sm {
-    @apply inline-flex items-center justify-center border rounded-full text-xs py-0.5 px-1.5;
+    @apply inline-flex items-center justify-center border rounded-full text-xs
+    py-0.5 px-1.5;
   }
   .badge--md {
     @apply badge--sm text-sm py-0.5 px-2;
@@ -29,4 +30,74 @@
     @apply border-amber-200 text-amber-700 bg-amber-50;
   }
   /* Buttons */
+  /* Types */
+  /* TODO: */
+  .btn--link {
+    @apply p-1;
+  }
+  /* Sizes */
+  .btn--md {
+    @apply rounded p-2.5 focus:outline-none focus:ring;
+    .icon {
+      @apply h-5 w-5;
+    }
+    .text {
+      @apply text-sm font-medium;
+    }
+    .wrapper {
+      @apply flex items-center justify-center gap-x-1 px-1;
+    }
+  }
+  .btn--lg {
+    @apply btn--md p-3 gap-x-1.5;
+    .text {
+      @apply text-base;
+    }
+    .wrapper {
+      @apply px-1.5;
+    }
+  }
+  .btn--xl {
+    @apply btn--md p-3.5 gap-x-2.5;
+    .text {
+      @apply text-base;
+    }
+    .wrapper {
+      @apply px-2;
+    }
+  }
+  .btn--2xl {
+    @apply btn--md p-4 gap-x-3.5;
+    .icon {
+      @apply h-6 w-6;
+    }
+    .text {
+      @apply text-lg;
+    }
+    .wrapper {
+      @apply px-2.5;
+    }
+  }
+  /* Variants */
+  .btn--primary {
+    @apply text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-indigo-200
+    focus:bg-indigo-800 disabled:pointer-events-none disabled:text-neutral-400
+    disabled:bg-neutral-100;
+  }
+  .btn--secondary {
+    @apply text-neutral-900 bg-white border border-neutral-200 shadow
+    hover:bg-neutral-50 focus:ring-indigo-200 focus:bg-neutral-50
+    disabled:border-none disabled:shadow-none disabled:pointer-events-none
+    disabled:text-neutral-400 disabled:bg-neutral-100;
+  }
+  .btn--tertiary {
+    @apply text-indigo-700 bg-white hover:bg-neutral-50 focus:ring-indigo-200
+    focus:bg-neutral-50 disabled:pointer-events-none disabled:text-neutral-400
+    disabled:bg-white;
+  }
+  .btn--destructive {
+    @apply text-white bg-red-600 hover:bg-red-700 focus:ring-red-200
+    focus:bg-red-700 disabled:pointer-events-none disabled:text-neutral-400
+    disabled:bg-white;
+  }
 }

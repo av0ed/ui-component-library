@@ -36,7 +36,7 @@ export default function ProfileCard({
       </div>
       <div className="flex flex-col gap-y-6">
         <Link
-          href="#"
+          href="/"
           className="flex items-center justify-center self-stretch rounded px-4 py-2.5 bg-indigo-700 text-white font-medium hover:bg-indigo-800 focus:outline-none focus:ring focus:ring-indigo-200"
         >
           Contact me

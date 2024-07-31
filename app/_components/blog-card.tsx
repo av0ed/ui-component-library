@@ -31,7 +31,7 @@ export default function BlogCard({
         </p>
         <p className="font-medium text-neutral-600 mt-3">{subHeadline}</p>
         <Link
-          href="#"
+          href="/"
           aria-label="Read more about this blog post"
           className="inline-flex items-center mt-6 font-medium text-indigo-700 decoration-2 underline-offset-4 hover:text-indigo-800"
         >
