@@ -23,32 +23,7 @@ export default function ProfileCardPage() {
         imageSrc="profile-thumbnail.png"
         imageAlt="Headshot of Sarah Dole"
       >
-        <div className="flex flex-row justify-center gap-x-4">
-          <Button
-            Icon={RiGithubFill}
-            size="md"
-            variant="tertiary"
-            ariaLabel="Follow Sarah Dole on Github"
-          />
-          <Button
-            Icon={RiLinkedinBoxFill}
-            size="md"
-            variant="tertiary"
-            ariaLabel="Follow Sarah Dole on LinkedIn"
-          />
-          <Button
-            Icon={RiInstagramFill}
-            size="md"
-            variant="tertiary"
-            ariaLabel="Follow Sarah Dole on Instagram"
-          />
-          <Button
-            Icon={RiTwitterXFill}
-            size="md"
-            variant="tertiary"
-            ariaLabel="Follow Sarah Dole on X"
-          />
-        </div>
+        <div className="flex flex-row justify-center gap-x-4"></div>
       </ProfileCard>
     </div>
   );

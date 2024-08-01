@@ -1,33 +1,29 @@
 import { RemixiconComponentType } from "@remixicon/react";
-import styles from "../_styles/Button.module.css";
-
-type ButtonClassNames = ButtonSizes | ButtonVariants;
 
 interface Props {
-  LeftIcon?: RemixiconComponentType;
-  RightIcon?: RemixiconComponentType;
-  classes: ButtonClassNames;
+  IconLeft?: RemixiconComponentType;
+  IconRight?: RemixiconComponentType;
+  classes: string;
   href?: string;
   isDisabled?: boolean;
   text?: string;
 }
 
+// TODO:
+// Restrict acceptable classes to those defined in the Button.module.css file.
 export default function Button({
-  LeftIcon,
-  RightIcon,
+  IconLeft,
+  IconRight,
   classes,
-  href,
   isDisabled,
   text,
 }: Props) {
-  const buttonClasses = styles[classes];
-
   return (
-    <button className={buttonClasses} disabled={isDisabled}>
+    <button className={classes} disabled={isDisabled}>
       <div className={`${text ? "wrapper" : ""}`}>
-        {LeftIcon && <LeftIcon className="icon" />}
+        {IconLeft && <IconLeft className="icon" />}
         {text && <span className="text">{text}</span>}
-        {RightIcon && <RightIcon className="icon" />}
+        {IconRight && <IconRight className="icon" />}
       </div>
     </button>
   );
