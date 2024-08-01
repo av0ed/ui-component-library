@@ -37,8 +37,3 @@ export default function ButtonPage() {
     </div>
   );
 }
-// <button key={`${size}_${jdx}`} className={`${size} ${variant}`}>
-//   <RiStarLine className="h-5 w-5" />
-//   Label
-//   <RiStarLine className="h-5 w-5" />
-// </button>
