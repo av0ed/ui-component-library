@@ -6,110 +6,176 @@
   /*-------*/
   /* Badge */
   /*-------*/
+
   .__badge--base {
     @apply inline-flex items-center justify-center border rounded-full text-xs py-0.5 px-1.5;
   }
+
   .badge--sm {
     @apply __badge--base;
   }
+
   .badge--md {
     @apply __badge--base text-sm py-0.5 px-2;
   }
+
   .badge--lg {
     @apply __badge--base text-sm py-1 px-2.5;
   }
+
   /*----------*/
   /* Variants */
   /*----------*/
+
   .badge--brand {
     @apply border-indigo-200 text-indigo-700 bg-indigo-50;
   }
+
   .badge--danger {
     @apply border-red-200 text-red-600 bg-red-50;
   }
+
   .badge--neutral {
     @apply border-neutral-200 text-neutral-600 bg-gray-50;
   }
+
   .badge--success {
     @apply border-green-200 text-green-700 bg-green-50;
   }
+
   .badge--warning {
     @apply border-amber-200 text-amber-700 bg-amber-50;
   }
+
   /*------*/
   /* Link */
   /*------*/
+
   .__link--base {
-    @apply p-0;
+    @apply flex gap-x-1 text-sm font-medium focus:outline-none focus:ring focus:ring-indigo-200;
+    svg {
+      @apply h-5 w-5;
+    }
   }
+
+  .link--md {
+    @apply __link--base;
+  }
+
+  .link--lg {
+    @apply __link--base gap-x-1.5 text-base;
+  }
+
+  .link--xl {
+    @apply __link--base gap-x-2.5 text-base;
+  }
+
+  .link--2xl {
+    @apply __link--base gap-x-3.5 text-lg;
+    svg {
+      @apply h-6 w-6;
+    }
+  }
+
+  .link--disabled {
+    @apply disabled:pointer-events-none disabled:text-neutral-400;
+  }
+
+  .link--primary {
+    @apply text-indigo-700 hover:text-indigo-800;
+  }
+
+  .link--secondary {
+    @apply text-neutral-400 hover:text-neutral-900;
+  }
+
   /*--------*/
   /* Button */
   /*--------*/
+
   .__btn--base {
-    @apply rounded p-2.5 focus:outline-none focus:ring;
-    .icon {
+    @apply flex items-center justify-center gap-x-1 px-3.5 py-2.5 rounded text-sm font-medium focus:outline-none focus:ring;
+    svg {
       @apply h-5 w-5;
     }
-    .text {
-      @apply text-sm font-medium;
-    }
-    .wrapper {
-      @apply flex items-center justify-center gap-x-1 px-1;
-    }
   }
+
   .btn--md {
     @apply __btn--base;
   }
+
   .btn--lg {
-    @apply __btn--base p-3;
-    .text {
-      @apply text-base;
-    }
-    .wrapper {
-      @apply px-1.5 gap-x-1.5;
-    }
+    @apply __btn--base gap-x-1.5 px-4 py-2.5 text-base;
   }
+
   .btn--xl {
-    @apply __btn--base p-3.5;
-    .text {
-      @apply text-base;
-    }
-    .wrapper {
-      @apply px-2 gap-x-2.5;
-    }
+    @apply __btn--base gap-x-2.5 px-5 py-3 text-base;
   }
+
   .btn--2xl {
-    @apply __btn--base p-4;
-    .icon {
+    @apply __btn--base gap-x-3.5 px-6 py-4 text-lg;
+    svg {
       @apply h-6 w-6;
     }
-    .text {
-      @apply text-lg;
-    }
-    .wrapper {
-      @apply px-2.5 gap-x-3.5;
+  }
+
+  /*------*/
+  /* Icon */
+  /*------*/
+
+  .__icon--btn--base {
+    @apply flex items-center justify-center p-2.5 rounded text-sm focus:outline-none focus:ring;
+    svg {
+      @apply h-5 w-5;
     }
   }
+
+  .icon--btn--md {
+    @apply __icon--base;
+  }
+
+  .icon--btn--lg {
+    @apply __icon--base p-3;
+  }
+
+  .icon--btn--xl {
+    @apply __icon--base p-3.5;
+  }
+
+  .icon--btn--2xl {
+    @apply __icon--base p-4;
+    svg {
+      @apply h-6 w-6;
+    }
+  }
+
   /*----------*/
   /* Variants */
   /*----------*/
-  .btn--primary {
+
+  .btn--primary,
+  .icon--btn--primary {
     @apply text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-indigo-200
     focus:bg-indigo-800 disabled:pointer-events-none disabled:text-neutral-400
     disabled:bg-neutral-100;
   }
-  .btn--secondary {
+
+  .btn--secondary .icon--btn--secondary {
     @apply text-neutral-900 bg-white border border-neutral-200 shadow
     hover:bg-neutral-50 focus:ring-indigo-200 focus:bg-neutral-50
     disabled:border-none disabled:shadow-none disabled:pointer-events-none
     disabled:text-neutral-400 disabled:bg-neutral-100;
   }
-  .btn--tertiary {
+
+  .btn--tertiary,
+  .icon--btn--tertiary {
     @apply text-indigo-700 bg-white hover:bg-neutral-50 focus:ring-indigo-200
     focus:bg-neutral-50 disabled:pointer-events-none disabled:text-neutral-400
     disabled:bg-white;
   }
-  .btn--destructive {
+
+  .btn--destructive,
+  .icon--btn--destructive {
     @apply text-white bg-red-600 hover:bg-red-700 focus:ring-red-200
     focus:bg-red-700 disabled:pointer-events-none disabled:text-neutral-400
     disabled:bg-white;

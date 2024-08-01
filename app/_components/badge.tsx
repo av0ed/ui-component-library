@@ -1,12 +1,8 @@
-import { BadgeClasses } from "@/types/badge";
-
 interface Props {
-  classes: BadgeClasses[];
+  classes: string;
   text: string;
 }
 
 export default function Badge({ classes, text }: Props) {
-  const badgeClasses = classes.join(" ");
-
-  return <span className={badgeClasses}>{text}</span>;
+  return <span className={classes}>{text}</span>;
 }
