@@ -56,6 +56,9 @@
     svg {
       @apply h-5 w-5;
     }
+    .content-spacer {
+      @apply flex items-center justify-center gap-x-1 px-1;
+    }
   }
 
   .link--md {
@@ -64,16 +67,25 @@
 
   .link--lg {
     @apply __link--base gap-x-1.5 text-base;
+    .content-spacer {
+      @apply px-1.5 gap-x-1.5;
+    }
   }
 
   .link--xl {
     @apply __link--base gap-x-2.5 text-base;
+    .content-spacer {
+      @apply px-2 gap-x-2.5;
+    }
   }
 
   .link--2xl {
     @apply __link--base gap-x-3.5 text-lg;
     svg {
       @apply h-6 w-6;
+    }
+    .content-spacer {
+      @apply px-2.5 gap-x-3.5;
     }
   }
 
@@ -94,9 +106,12 @@
   /*--------*/
 
   .__btn--base {
-    @apply flex items-center justify-center gap-x-1 px-3.5 py-2.5 rounded text-sm font-medium focus:outline-none focus:ring;
+    @apply text-sm font-medium rounded p-2.5 focus:outline-none focus:ring;
     svg {
       @apply h-5 w-5;
+    }
+    .content-spacer {
+      @apply flex items-center justify-center gap-x-1 px-1;
     }
   }
 
@@ -105,47 +120,26 @@
   }
 
   .btn--lg {
-    @apply __btn--base gap-x-1.5 px-4 py-2.5 text-base;
+    @apply __btn--base text-base p-3;
+    .content-spacer {
+      @apply px-1.5 gap-x-1.5;
+    }
   }
 
   .btn--xl {
-    @apply __btn--base gap-x-2.5 px-5 py-3 text-base;
+    @apply __btn--base text-base p-3.5;
+    .content-spacer {
+      @apply px-2 gap-x-2.5;
+    }
   }
 
   .btn--2xl {
-    @apply __btn--base gap-x-3.5 px-6 py-4 text-lg;
+    @apply __btn--base text-lg p-4;
     svg {
       @apply h-6 w-6;
     }
-  }
-
-  /*------*/
-  /* Icon */
-  /*------*/
-
-  .__icon--btn--base {
-    @apply flex items-center justify-center p-2.5 rounded text-sm focus:outline-none focus:ring;
-    svg {
-      @apply h-5 w-5;
-    }
-  }
-
-  .icon--btn--md {
-    @apply __icon--base;
-  }
-
-  .icon--btn--lg {
-    @apply __icon--base p-3;
-  }
-
-  .icon--btn--xl {
-    @apply __icon--base p-3.5;
-  }
-
-  .icon--btn--2xl {
-    @apply __icon--base p-4;
-    svg {
-      @apply h-6 w-6;
+    .content-spacer {
+      @apply px-2.5 gap-x-3.5;
     }
   }
 
@@ -153,29 +147,26 @@
   /* Variants */
   /*----------*/
 
-  .btn--primary,
-  .icon--btn--primary {
+  .btn--primary {
     @apply text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-indigo-200
     focus:bg-indigo-800 disabled:pointer-events-none disabled:text-neutral-400
     disabled:bg-neutral-100;
   }
 
-  .btn--secondary .icon--btn--secondary {
+  .btn--secondary {
     @apply text-neutral-900 bg-white border border-neutral-200 shadow
     hover:bg-neutral-50 focus:ring-indigo-200 focus:bg-neutral-50
     disabled:border-none disabled:shadow-none disabled:pointer-events-none
     disabled:text-neutral-400 disabled:bg-neutral-100;
   }
 
-  .btn--tertiary,
-  .icon--btn--tertiary {
+  .btn--tertiary {
     @apply text-indigo-700 bg-white hover:bg-neutral-50 focus:ring-indigo-200
     focus:bg-neutral-50 disabled:pointer-events-none disabled:text-neutral-400
     disabled:bg-white;
   }
 
-  .btn--destructive,
-  .icon--btn--destructive {
+  .btn--destructive {
     @apply text-white bg-red-600 hover:bg-red-700 focus:ring-red-200
     focus:bg-red-700 disabled:pointer-events-none disabled:text-neutral-400
     disabled:bg-white;

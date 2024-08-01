@@ -1,21 +1,60 @@
 import Link from "next/link";
+import { RemixiconComponentType } from "@remixicon/react";
 
 interface Props {
-  children: React.ReactNode;
+  Icon?: RemixiconComponentType;
+  iconAlign?: "left" | "center" | "right" | "surround";
   classes: string;
   href?: string;
   isDisabled?: boolean;
-  role?: string;
+  text?: string;
 }
 
-export function Button({ children, classes, href, isDisabled, role }: Props) {
+export default function Button({
+  Icon,
+  classes,
+  href,
+  iconAlign = "right",
+  isDisabled,
+  text,
+}: Props) {
+  const renderLeftIcon = () => {
+    if (Icon && (iconAlign === "left" || iconAlign === "surround")) {
+      return <Icon />;
+    }
+  };
+
+  const renderCenterContent = () => {
+    if (text) {
+      return <span>{text}</span>;
+    }
+    if (Icon && iconAlign === "center") {
+      return <Icon />;
+    }
+  };
+
+  const renderRightIcon = () => {
+    if (Icon && (iconAlign === "right" || iconAlign === "surround")) {
+      return <Icon />;
+    }
+  };
+
   return href ? (
-    <Link className={classes} href={href}>
-      {children}
+    <Link
+      className={`${classes} ${isDisabled ? "btn--disabled" : ""}`}
+      href={href}
+    >
+      {renderLeftIcon()}
+      {renderCenterContent()}
+      {renderRightIcon()}
     </Link>
   ) : (
-    <button className={classes} disabled={isDisabled} role={role}>
-      {children}
+    <button className={classes} disabled={isDisabled}>
+      <div className={`${text ? "content-spacer" : ""}`}>
+        {renderLeftIcon()}
+        {renderCenterContent()}
+        {renderRightIcon()}
+      </div>
     </button>
   );
 }
