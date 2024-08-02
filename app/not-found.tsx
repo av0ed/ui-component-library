@@ -10,8 +10,7 @@ export default function NotFound() {
         alt="An abstract, flowing background"
         className="fixed h-screen w-screen overflow-hidden -z-10"
         fill
-        placeholder="blur"
-        quality={50}
+        quality={25}
         src={abstractBackground}
         style={{
           objectFit: "cover",
