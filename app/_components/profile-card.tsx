@@ -4,6 +4,7 @@ import Image from "next/image";
 interface Props {
   blurb: string;
   children: React.ReactNode;
+  contactHref: string;
   imageSrc: string;
   imageAlt: string;
   name: string;
@@ -13,13 +14,14 @@ interface Props {
 export default function ProfileCard({
   blurb,
   children,
+  contactHref,
   imageSrc,
   imageAlt,
   name,
   role,
 }: Props) {
   return (
-    <div className="w-[340px] py-6 px-4 border border-neutral-300 bg-white flex flex-col rounded-lg shadow-sm shadow-neutral-300 gap-y-10">
+    <div className="w-[340px] py-6 px-4 border-l border-r border-b border-neutral-300 bg-white flex flex-col rounded-lg shadow gap-y-10">
       <div className="flex flex-col items-center gap-y-6">
         <Image
           src={imageSrc}
@@ -36,7 +38,7 @@ export default function ProfileCard({
       </div>
       <div className="flex flex-col gap-y-6">
         <Link
-          href="/"
+          href={contactHref}
           className="flex items-center justify-center self-stretch rounded px-4 py-2.5 bg-indigo-700 text-white font-medium hover:bg-indigo-800 focus:outline-none focus:ring focus:ring-indigo-200"
         >
           Contact me
