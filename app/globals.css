@@ -57,7 +57,7 @@
       @apply h-5 w-5;
     }
     .content-spacer {
-      @apply flex items-center justify-center gap-x-1 px-1;
+      @apply flex items-center justify-center gap-x-1;
     }
   }
 
@@ -68,14 +68,14 @@
   .link--lg {
     @apply __link--base gap-x-1.5 text-base;
     .content-spacer {
-      @apply px-1.5 gap-x-1.5;
+      @apply gap-x-1.5;
     }
   }
 
   .link--xl {
     @apply __link--base gap-x-2.5 text-base;
     .content-spacer {
-      @apply px-2 gap-x-2.5;
+      @apply gap-x-2.5;
     }
   }
 
@@ -85,7 +85,7 @@
       @apply h-6 w-6;
     }
     .content-spacer {
-      @apply px-2.5 gap-x-3.5;
+      @apply gap-x-3.5;
     }
   }
 
@@ -98,7 +98,7 @@
   }
 
   .link--secondary {
-    @apply text-neutral-400 hover:text-neutral-900;
+    @apply text-neutral-600 hover:text-neutral-900;
   }
 
   /*--------*/

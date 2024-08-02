@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { RemixiconComponentType } from "@remixicon/react";
 
+type IconAlign = "left" | "center" | "right" | "surround";
+
 interface Props {
   Icon?: RemixiconComponentType;
-  iconAlign?: "left" | "center" | "right" | "surround";
   classes: string;
   href?: string;
+  iconAlign?: IconAlign;
   isDisabled?: boolean;
   text?: string;
 }
