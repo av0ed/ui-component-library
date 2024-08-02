@@ -52,9 +52,9 @@
   /*------*/
 
   .__link--base {
-    @apply flex gap-x-1 text-sm font-medium focus:outline-none focus:ring focus:ring-indigo-200;
+    @apply flex flex-nowrap shrink-0 gap-x-1 text-sm font-medium focus:outline-none focus:ring focus:ring-indigo-200;
     svg {
-      @apply h-5 w-5;
+      @apply h-5 w-5 p-0.375;
     }
     .content-spacer {
       @apply flex items-center justify-center gap-x-1;
@@ -82,7 +82,7 @@
   .link--2xl {
     @apply __link--base gap-x-3.5 text-lg;
     svg {
-      @apply h-6 w-6;
+      @apply h-6 w-6 p-0.5;
     }
     .content-spacer {
       @apply gap-x-3.5;
@@ -108,10 +108,13 @@
   .__btn--base {
     @apply flex flex-nowrap shrink-0 text-sm font-medium rounded p-2.5 focus:outline-none focus:ring;
     svg {
-      @apply h-5 w-5;
+      @apply h-5 w-5 p-0.375;
     }
     .content-spacer {
       @apply flex items-center justify-center gap-x-1 px-1;
+      span {
+        @apply px-0.5;
+      }
     }
   }
 
@@ -136,7 +139,7 @@
   .btn--2xl {
     @apply __btn--base text-lg p-4;
     svg {
-      @apply h-6 w-6;
+      @apply h-6 w-6 p-0.5;
     }
     .content-spacer {
       @apply px-2.5 gap-x-3.5;
