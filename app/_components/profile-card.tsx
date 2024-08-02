@@ -21,7 +21,7 @@ export default function ProfileCard({
   role,
 }: Props) {
   return (
-    <div className="w-[340px] py-6 px-4 border-l border-r border-b border-neutral-300 bg-white flex flex-col rounded-lg shadow gap-y-10">
+    <div className="w-[340px] py-6 px-4 border-l border-r border-b border-neutral-300 bg-white flex flex-col rounded-lg shadow shadow-neutral-300 gap-y-10">
       <div className="flex flex-col items-center gap-y-6">
         <Image
           src={imageSrc}

@@ -13,7 +13,8 @@
     "@remixicon/react": "^4.2.0",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@testing-library/react": "^16.0.0",

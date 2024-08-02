@@ -17,7 +17,7 @@ export default function BlogCard({
   imageAlt,
 }: Props) {
   return (
-    <article className="flex flex-col border-l border-r border-b border-neutral-200 shadow bg-white rounded-lg w-[340px]">
+    <article className="flex flex-col border-l border-r border-b border-neutral-200 shadow shadow-neutral-200 bg-white rounded-lg w-[340px]">
       <Image
         className="rounded-t-lg object-cover"
         src={imageSrc}
