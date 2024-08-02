@@ -23,6 +23,9 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-noto-sans)"],
       },
+      spacing: {
+        "0.375": "1.5px",
+      },
     },
   },
   plugins: [],
