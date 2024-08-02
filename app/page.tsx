@@ -11,6 +11,9 @@ export default function Home() {
           <Link href="/badge">Badge</Link>
         </li>
         <li>
+          <Link href="/button">Button</Link>
+        </li>
+        <li>
           <Link href="/blog-card">Blog Card</Link>
         </li>
         <li>

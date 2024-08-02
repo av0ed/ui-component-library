@@ -1,39 +1,62 @@
-import { RemixiconComponentType } from "@remixicon/react";
 import Link from "next/link";
+import { RemixiconComponentType } from "@remixicon/react";
 
-type ButtonSize = "md" | "lg" | "xl" | "2xl";
+type IconAlign = "left" | "center" | "right" | "surround";
 
 interface Props {
-  IconLeft?: RemixiconComponentType;
-  IconRight?: RemixiconComponentType;
-  ariaLabel?: string;
+  Icon?: RemixiconComponentType;
+  classes: string;
+  href?: string;
+  iconAlign?: IconAlign;
   isDisabled?: boolean;
   text?: string;
-  size?: ButtonSize;
 }
 
 export default function Button({
-  IconLeft,
-  IconRight,
-  ariaLabel,
+  Icon,
+  classes,
+  href,
+  iconAlign = "right",
   isDisabled,
-  size,
   text,
 }: Props) {
-  return (
+  const renderLeftIcon = () => {
+    if (Icon && (iconAlign === "left" || iconAlign === "surround")) {
+      return <Icon />;
+    }
+  };
+
+  const renderCenterContent = () => {
+    if (text) {
+      return <span>{text}</span>;
+    }
+    if (Icon && iconAlign === "center") {
+      return <Icon />;
+    }
+  };
+
+  const renderRightIcon = () => {
+    if (Icon && (iconAlign === "right" || iconAlign === "surround")) {
+      return <Icon />;
+    }
+  };
+
+  return href ? (
     <Link
-      aria-label={ariaLabel}
-      className={`flex flex-row p-2 rounded hover:bg-neutral-50 focus:ring focus:ring-indigo-200 focus:outline-none ${isDisabled ? "pointer-events-none" : ""}`}
-      href="#"
-      tabIndex={isDisabled ? -1 : 0}
+      className={`${classes} ${isDisabled ? "btn--disabled" : ""}`}
+      href={href}
     >
-      {IconLeft && (
-        <IconLeft aria-hidden={true} className="w-5 h-5 fill-indigo-700" />
-      )}
-      {text}
-      {IconRight && (
-        <IconRight aria-hidden={true} className="w-5 h-5 fill-indigo-700" />
-      )}
+      {renderLeftIcon()}
+      {renderCenterContent()}
+      {renderRightIcon()}
     </Link>
+  ) : (
+    <button className={classes} disabled={isDisabled}>
+      <div className={`${text ? "content-spacer" : ""}`}>
+        {renderLeftIcon()}
+        {renderCenterContent()}
+        {renderRightIcon()}
+      </div>
+    </button>
   );
 }
