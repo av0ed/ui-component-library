@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Button from "./_components/button";
 import abstractBackground from "../public/abstract-background.jpg";
 
 export default function NotFound() {
@@ -24,12 +25,11 @@ export default function NotFound() {
         <p className="mt-5 md:mt-6 text-lg md:text-xl text-neutral-600">
           Sorry, the page you are looking for doesn&apos;t exist or has moved.
         </p>
-        <Link
-          className="mt-8 md:mt-16 flex items-center justify-center self-stretch md:self-start text-base md:text-lg rounded px-4 py-2.5 md:py-4 md:px-6 bg-indigo-700 text-white font-medium hover:bg-indigo-800 focus:outline-none focus:ring focus:ring-indigo-200"
+        <Button
+          classes="btn--lg md:btn--2xl btn--primary mt-8 md:mt-16 self-stretch md:self-start"
           href="/"
-        >
-          Back to Home
-        </Link>
+          text="Back to Home"
+        />
       </div>
     </section>
   );

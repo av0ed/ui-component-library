@@ -1,4 +1,5 @@
 import { RiArrowRightLine } from "@remixicon/react";
+import Badge from "../_components/badge";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,7 +17,7 @@ export default function BlogCard({
   imageAlt,
 }: Props) {
   return (
-    <article className="flex flex-col border border-neutral-300 shadow-sm shadow-neutral-300 bg-white rounded-lg w-[340px]">
+    <article className="flex flex-col border-l border-r border-b border-neutral-200 shadow bg-white rounded-lg w-[340px]">
       <Image
         className="rounded-t-lg object-cover"
         src={imageSrc}
@@ -25,7 +26,7 @@ export default function BlogCard({
         width={340}
       />
       <div className="px-4 py-6">
-        <span className="badge--md badge--success">Interior</span>
+        <Badge classes="badge--md badge--success" text="Interior" />
         <p className="text-lg font-semibold text-neutral-900 mt-2">
           {headline}
         </p>

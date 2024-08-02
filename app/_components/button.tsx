@@ -41,22 +41,26 @@ export default function Button({
     }
   };
 
-  return href ? (
-    <Link
-      className={`${classes} ${isDisabled ? "btn--disabled" : ""}`}
-      href={href}
-    >
-      {renderLeftIcon()}
-      {renderCenterContent()}
-      {renderRightIcon()}
-    </Link>
-  ) : (
-    <button className={classes} disabled={isDisabled}>
+  const renderContent = () => {
+    return (
       <div className={`${text ? "content-spacer" : ""}`}>
         {renderLeftIcon()}
         {renderCenterContent()}
         {renderRightIcon()}
       </div>
+    );
+  };
+
+  return href ? (
+    <Link
+      className={`${classes} ${isDisabled ? "btn--disabled" : ""}`}
+      href={href}
+    >
+      {renderContent()}
+    </Link>
+  ) : (
+    <button className={classes} disabled={isDisabled}>
+      {renderContent()}
     </button>
   );
 }
