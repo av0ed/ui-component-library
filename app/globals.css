@@ -106,7 +106,7 @@
   /*--------*/
 
   .__btn--base {
-    @apply text-sm font-medium rounded p-2.5 focus:outline-none focus:ring;
+    @apply flex flex-nowrap shrink-0 text-sm font-medium rounded p-2.5 focus:outline-none focus:ring;
     svg {
       @apply h-5 w-5;
     }

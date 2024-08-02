@@ -18,7 +18,7 @@ export default function ButtonPage() {
   return (
     <div className="h-screen flex flex-col items-center py-28 px-6 md:px-8 lg:px-0">
       <div className="flex flex-col justify-center items-start gap-y-12">
-        <div className="flex flex-row items-center gap-x-5">
+        <div className="flex flex-row flex-wrap items-center gap-5">
           <Button classes="btn--md btn--primary" text="Button CTA" />
           <Button
             classes="btn--lg btn--primary"
@@ -39,7 +39,7 @@ export default function ButtonPage() {
             iconAlign="center"
           />
         </div>
-        <div className="flex flex-row items-center gap-x-5">
+        <div className="flex flex-row flex-wrap items-center gap-5">
           <Button classes="btn--md btn--secondary" text="Button CTA" />
           <Button
             classes="btn--lg btn--secondary"
@@ -60,7 +60,7 @@ export default function ButtonPage() {
             iconAlign="center"
           />
         </div>
-        <div className="flex flex-row items-center gap-x-5">
+        <div className="flex flex-row flex-wrap items-center gap-5">
           <Button classes="btn--md btn--tertiary" text="Button CTA" />
           <Button
             classes="btn--lg btn--tertiary"
@@ -81,7 +81,7 @@ export default function ButtonPage() {
             iconAlign="center"
           />
         </div>
-        <div className="flex flex-row items-center gap-x-5">
+        <div className="flex flex-row flex-wrap items-center gap-5">
           <Button classes="link--md link--primary" text="Button CTA" />
           <Button
             classes="link--lg link--primary"
@@ -102,7 +102,7 @@ export default function ButtonPage() {
             iconAlign="center"
           />
         </div>
-        <div className="flex flex-row items-center gap-x-5">
+        <div className="flex flex-row flex-wrap items-center gap-5">
           <Button classes="link--md link--secondary" text="Button CTA" />
           <Button
             classes="link--lg link--secondary"
@@ -123,7 +123,7 @@ export default function ButtonPage() {
             iconAlign="center"
           />
         </div>
-        <div className="flex flex-row items-center gap-x-5">
+        <div className="flex flex-row flex-wrap items-center gap-5">
           <Button classes="btn--md btn--destructive" text="Button CTA" />
           <Button
             classes="btn--lg btn--destructive"
