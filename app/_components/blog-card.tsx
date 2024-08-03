@@ -1,7 +1,7 @@
 import { RiArrowRightLine } from "@remixicon/react";
 import Badge from "../_components/badge";
+import Button from "../_components/button";
 import Image from "next/image";
-import Link from "next/link";
 
 interface Props {
   headline: string;
@@ -31,14 +31,14 @@ export default function BlogCard({
           {headline}
         </p>
         <p className="font-medium text-neutral-600 mt-3">{subHeadline}</p>
-        <Link
+        <Button
+          Icon={RiArrowRightLine}
+          iconAlign="right"
           href="/"
-          aria-label="Read more about this blog post"
-          className="inline-flex items-center mt-6 font-medium text-indigo-700 decoration-2 underline-offset-4 hover:text-indigo-800"
-        >
-          Read more
-          <RiArrowRightLine className="ml-1.5 h-5 w-5 fill-indigo-700" />
-        </Link>
+          ariaLabel="Read more about this blog post"
+          classes="mt-6 link--lg link--primary"
+          text="Read more"
+        />
       </div>
     </article>
   );
