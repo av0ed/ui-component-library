@@ -14,20 +14,20 @@ export default function TextInputPage() {
         label="Email"
         placeholder="name@email.com"
         type="email"
-        hintMsg="This is a hint text."
+        hint="This is a hint text."
       />
       <TextInput
         IconRight={RiQuestionLine}
         label="Email"
         placeholder="name@email.com"
         type="email"
-        hintMsg="This is a hint text."
+        hint="This is a hint text."
       />
       <TextInput
         IconRight={RiQuestionLine}
         label="Email"
         placeholder="name@email.com"
-        hintMsg="This is a hint text."
+        hint="This is a hint text."
         type="email"
         isDisabled={true}
       />
@@ -37,7 +37,8 @@ export default function TextInputPage() {
         label="Email"
         placeholder="name@email.com"
         type="email"
-        errorMsg="This is an error message."
+        hint="This is a hint text."
+        error="This is an error message."
       />
     </div>
   );
