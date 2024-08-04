@@ -37,7 +37,6 @@ export default function TextInputPage() {
         label="Email"
         placeholder="name@email.com"
         type="email"
-        hint="This is a hint text."
         error="This is an error message."
       />
     </div>

@@ -18,6 +18,8 @@ const classes = {
   hint: "font-normal text-neutral-500",
   icon: "absolute text-neutral-400",
   iconError: "absolute text-red-600",
+  iconLeft: "left-3.5 h-5 w-5",
+  iconRight: "right-3.5 h-4 w-4",
   input: `flex items-center w-full text-neutral-900 border border-neutral-200
       bg-neutral-50 rounded gap-x-2 py-2.5 px-3.5 text-ellipsis overflow-hidden
       font-normal placeholder-neutral-500 focus:outline-none focus:ring
@@ -54,7 +56,7 @@ export default function TextInput({
       {label}
       <div className={classes.inputWrapper}>
         {IconLeft && (
-          <IconLeft className={`${classes.icon} left-3.5 h-5 w-5`} />
+          <IconLeft className={`${classes.icon} ${classes.iconLeft}`} />
         )}
         <input
           aria-invalid={!!error}
@@ -68,7 +70,7 @@ export default function TextInput({
         />
         {IconRight && (
           <IconRight
-            className={`${error ? classes.iconError : classes.icon} right-3.5 h-4 w-4`}
+            className={`${error ? classes.iconError : classes.icon} ${classes.iconRight}`}
           />
         )}
       </div>
