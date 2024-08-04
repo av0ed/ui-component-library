@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import Badge from "../_components/badge";
 
-describe("Badge Component", () => {
+describe("Badge", () => {
   it("renders the badge with the correct text", () => {
     render(<Badge classes="badge--sm badge--primary" text="Label" />);
     const badgeElement = screen.getByText("Label");

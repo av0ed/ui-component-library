@@ -5,6 +5,7 @@ type IconAlign = "left" | "center" | "right" | "surround";
 
 interface Props {
   Icon?: RemixiconComponentType;
+  ariaLabel?: string;
   classes: string;
   href?: string;
   iconAlign?: IconAlign;
