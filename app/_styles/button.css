@@ -1,6 +1,6 @@
 @layer components {
   .__btn--base {
-    @apply flex flex-nowrap shrink-0 text-sm font-medium rounded p-2.5 focus:outline-none focus:ring;
+    @apply flex flex-nowrap items-center justify-center shrink-0 text-sm font-medium rounded p-2.5 focus:outline-none focus:ring;
     svg {
       @apply h-5 w-5 p-0.375;
     }
@@ -17,14 +17,14 @@
   }
 
   .btn--lg {
-    @apply __btn--base text-base p-3;
+    @apply __btn--base text-base;
     .content-spacer {
       @apply px-1.5 gap-x-1.5;
     }
   }
 
   .btn--xl {
-    @apply __btn--base text-base p-3.5;
+    @apply __btn--base text-base p-3;
     .content-spacer {
       @apply px-2 gap-x-2.5;
     }

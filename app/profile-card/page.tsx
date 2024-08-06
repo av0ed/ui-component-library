@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ProfileCard from "../_components/profile-card";
-import Button from "../_components/button";
+import IconButton from "../_components/icon-button";
 import {
   RiTwitterXFill,
   RiInstagramFill,
@@ -24,25 +24,25 @@ export default function ProfileCardPage() {
         imageAlt="Headshot of Sarah Dole"
       >
         <div className="flex flex-row justify-center gap-x-4">
-          <Button
+          <IconButton
             Icon={RiGithubFill}
             href="/"
-            classes="btn--md btn--tertiary"
+            classes="icon--btn--md icon--btn--tertiary"
           />
-          <Button
+          <IconButton
             Icon={RiLinkedinBoxFill}
             href="/"
-            classes="btn--md btn--tertiary"
+            classes="icon--btn--md icon--btn--tertiary"
           />
-          <Button
+          <IconButton
             Icon={RiInstagramFill}
             href="/"
-            classes="btn--md btn--tertiary"
+            classes="icon--btn--md icon--btn--tertiary"
           />
-          <Button
+          <IconButton
             Icon={RiTwitterXFill}
             href="/"
-            classes="btn--md btn--tertiary"
+            classes="icon--btn--md icon--btn--tertiary"
           />
         </div>
       </ProfileCard>
