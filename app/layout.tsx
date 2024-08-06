@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${notoSans.className} h-screen bg-white`}>
+      <body className={`${notoSans.className} h-full bg-white`}>
         {children}
       </body>
     </html>
