@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Button from "../_components/button";
 
 interface Props {
   blurb: string;
@@ -37,12 +38,11 @@ export default function ProfileCard({
         <p className="text-neutral-600 text-center line-clamp-6">{blurb}</p>
       </div>
       <div className="flex flex-col gap-y-6">
-        <Link
+        <Button
           href={contactHref}
-          className="flex items-center justify-center self-stretch rounded px-4 py-2.5 bg-indigo-700 text-white font-medium hover:bg-indigo-800 focus:outline-none focus:ring focus:ring-indigo-200"
-        >
-          Contact me
-        </Link>
+          classes="btn--lg btn--primary"
+          text="Contact me"
+        />
         {children}
       </div>
     </div>

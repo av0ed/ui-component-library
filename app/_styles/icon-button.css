@@ -1,0 +1,61 @@
+@import "./button.css";
+
+@layer components {
+  .__icon--btn--base {
+    @apply rounded p-2.5 focus:outline-none focus:ring;
+    svg {
+      @apply h-5 w-5 p-0.375;
+    }
+  }
+
+  .icon--btn--md {
+    @apply __icon--btn--base;
+  }
+
+  .icon--btn--lg {
+    @apply __icon--btn--base p-3;
+  }
+
+  .icon--btn--xl {
+    @apply __icon--btn--base p-3.5;
+  }
+
+  .icon--btn--2xl {
+    @apply __icon--btn--base p-4;
+    svg {
+      @apply h-6 w-6 p-0.5;
+    }
+  }
+
+  .icon--btn--primary {
+    @apply text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-indigo-200
+    focus:bg-indigo-800;
+  }
+
+  .icon--btn--secondary {
+    @apply text-neutral-900 bg-white border border-neutral-200 shadow
+    hover:bg-neutral-50 focus:ring-indigo-200 focus:bg-neutral-50;
+  }
+
+  .icon--btn--tertiary {
+    @apply text-indigo-700 bg-white hover:bg-neutral-50 focus:ring-indigo-200
+    focus:bg-neutral-50;
+  }
+
+  .icon--btn--destructive {
+    @apply text-white bg-red-600 hover:bg-red-700 focus:ring-red-200
+    focus:bg-red-700;
+  }
+
+  .__icon--btn--disabled--base {
+    @apply shadow-none pointer-events-none border-none;
+  }
+
+  .icon--btn--disabled--gray {
+    @apply __icon--btn--disabled--base bg-neutral-100 text-neutral-400;
+  }
+
+  .icon--btn--disabled--white {
+    @apply __icon--btn--disabled--base bg-white text-neutral-400;
+  }
+}

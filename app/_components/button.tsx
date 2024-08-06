@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { RemixiconComponentType } from "@remixicon/react";
 
-type IconAlign = "left" | "center" | "right" | "surround";
+type IconAlign = "left" | "right" | "surround";
 
 interface Props {
   Icon?: RemixiconComponentType;
@@ -27,15 +27,6 @@ export default function Button({
     }
   };
 
-  const renderCenterContent = () => {
-    if (text) {
-      return <span>{text}</span>;
-    }
-    if (Icon && iconAlign === "center") {
-      return <Icon />;
-    }
-  };
-
   const renderRightIcon = () => {
     if (Icon && (iconAlign === "right" || iconAlign === "surround")) {
       return <Icon />;
@@ -46,7 +37,7 @@ export default function Button({
     return (
       <div className={`${text ? "content-spacer" : ""}`}>
         {renderLeftIcon()}
-        {renderCenterContent()}
+        {text && <span>{text}</span>}
         {renderRightIcon()}
       </div>
     );

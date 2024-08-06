@@ -1,56 +1,6 @@
 @layer components {
-  .__link--base {
-    @apply flex flex-nowrap shrink-0 gap-x-1 text-sm font-medium focus:outline-none focus:ring focus:ring-indigo-200;
-    svg {
-      @apply h-5 w-5 p-0.375;
-    }
-    .content-spacer {
-      @apply flex items-center justify-center gap-x-1;
-    }
-  }
-
-  .link--md {
-    @apply __link--base;
-  }
-
-  .link--lg {
-    @apply __link--base gap-x-1.5 text-base;
-    .content-spacer {
-      @apply gap-x-1.5;
-    }
-  }
-
-  .link--xl {
-    @apply __link--base gap-x-2.5 text-base;
-    .content-spacer {
-      @apply gap-x-2.5;
-    }
-  }
-
-  .link--2xl {
-    @apply __link--base gap-x-3.5 text-lg;
-    svg {
-      @apply h-6 w-6 p-0.5;
-    }
-    .content-spacer {
-      @apply gap-x-3.5;
-    }
-  }
-
-  .link--disabled {
-    @apply disabled:pointer-events-none disabled:text-neutral-400;
-  }
-
-  .link--primary {
-    @apply text-indigo-700 hover:text-indigo-800;
-  }
-
-  .link--secondary {
-    @apply text-neutral-600 hover:text-neutral-900;
-  }
-
   .__btn--base {
-    @apply flex flex-nowrap shrink-0 text-sm font-medium rounded p-2.5 focus:outline-none focus:ring;
+    @apply flex flex-nowrap items-center justify-center shrink-0 text-sm font-medium rounded p-2.5 focus:outline-none focus:ring;
     svg {
       @apply h-5 w-5 p-0.375;
     }
@@ -67,14 +17,14 @@
   }
 
   .btn--lg {
-    @apply __btn--base text-base p-3;
+    @apply __btn--base text-base;
     .content-spacer {
       @apply px-1.5 gap-x-1.5;
     }
   }
 
   .btn--xl {
-    @apply __btn--base text-base p-3.5;
+    @apply __btn--base text-base p-3;
     .content-spacer {
       @apply px-2 gap-x-2.5;
     }
