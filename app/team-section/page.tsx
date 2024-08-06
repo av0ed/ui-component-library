@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 export default function TeamSectionPage() {
   return (
-    <div className="h-full p-4 bg-neutral-600 bg-gradient-haze">
+    <div className="h-full p-4 bg-gradient-haze">
       <div className="h-full flex flex-col justify-start items-center bg-white py-12 px-4 md:py-16 lg:py-24 lg:px-14 ">
         <span className="text-base font-semibold text-indigo-700">Team</span>
         <h1 className="mt-3 text-3xl font-semibold text-neutral-900 md:text-5xl">
