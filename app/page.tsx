@@ -11,6 +11,7 @@ export default function Home() {
     "Icon Button",
     "Footer",
     "Profile Card",
+    "Team Section",
     "Testimonial Card",
     "Text Input",
   ];
