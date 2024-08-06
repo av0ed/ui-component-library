@@ -8,6 +8,7 @@ export default function Home() {
     "Badge",
     "Button",
     "Blog Card",
+    "Icon Button",
     "Footer",
     "Profile Card",
     "Testimonial Card",

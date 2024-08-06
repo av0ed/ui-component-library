@@ -33,11 +33,6 @@ export default function ButtonPage() {
             text="Button CTA"
           />
           <Button classes="btn--2xl btn--primary" text="Button CTA" />
-          <Button
-            classes="btn--2xl btn--primary"
-            Icon={RiStarLine}
-            iconAlign="center"
-          />
         </div>
         <div className="flex flex-row flex-wrap items-center gap-5">
           <Button classes="btn--md btn--secondary" text="Button CTA" />
@@ -54,11 +49,6 @@ export default function ButtonPage() {
             text="Button CTA"
           />
           <Button classes="btn--2xl btn--secondary" text="Button CTA" />
-          <Button
-            classes="btn--2xl btn--secondary"
-            Icon={RiStarLine}
-            iconAlign="center"
-          />
         </div>
         <div className="flex flex-row flex-wrap items-center gap-5">
           <Button classes="btn--md btn--tertiary" text="Button CTA" />
@@ -75,11 +65,6 @@ export default function ButtonPage() {
             text="Button CTA"
           />
           <Button classes="btn--2xl btn--tertiary" text="Button CTA" />
-          <Button
-            classes="btn--2xl btn--tertiary"
-            Icon={RiStarLine}
-            iconAlign="center"
-          />
         </div>
         <div className="flex flex-row flex-wrap items-center gap-5">
           <Button classes="link--md link--primary" text="Button CTA" />
@@ -96,11 +81,6 @@ export default function ButtonPage() {
             text="Button CTA"
           />
           <Button classes="link--2xl link--primary" text="Button CTA" />
-          <Button
-            classes="link--2xl link--primary"
-            Icon={RiStarLine}
-            iconAlign="center"
-          />
         </div>
         <div className="flex flex-row flex-wrap items-center gap-5">
           <Button classes="link--md link--secondary" text="Button CTA" />
@@ -117,11 +97,6 @@ export default function ButtonPage() {
             text="Button CTA"
           />
           <Button classes="link--2xl link--secondary" text="Button CTA" />
-          <Button
-            classes="link--2xl link--secondary"
-            Icon={RiStarLine}
-            iconAlign="center"
-          />
         </div>
         <div className="flex flex-row flex-wrap items-center gap-5">
           <Button classes="btn--md btn--destructive" text="Button CTA" />
@@ -138,11 +113,6 @@ export default function ButtonPage() {
             text="Button CTA"
           />
           <Button classes="btn--2xl btn--destructive" text="Button CTA" />
-          <Button
-            classes="btn--2xl btn--destructive"
-            Icon={RiStarLine}
-            iconAlign="center"
-          />
         </div>
       </div>
     </div>

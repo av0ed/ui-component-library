@@ -1,5 +1,7 @@
 @import "./_styles/badge.css";
 @import "./_styles/button.css";
+@import "./_styles/icon-button.css";
+@import "./_styles/link.css";
 
 @tailwind base;
 @tailwind components;
