@@ -7,8 +7,18 @@ export const metadata: Metadata = {
 
 export default function TextAreaPage() {
   return (
-    <div className="flex flex-col gap-y-12 justify-start items-center my-28 px-4">
-      <TextArea label="Comment" placeholder="Write your comment here..." />
+    <div className="h-full flex flex-col gap-y-8 justify-start items-center py-28">
+      <TextArea label="Description" placeholder="Write your message..." />
+      <TextArea
+        label="Description"
+        placeholder="Enter a description..."
+        error="This field is required"
+      />
+      <TextArea
+        label="Description"
+        placeholder="Write your message..."
+        isDisabled={true}
+      />
     </div>
   );
 }

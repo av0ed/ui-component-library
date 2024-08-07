@@ -1,3 +1,6 @@
+"use client";
+import { useState } from "react";
+
 interface Props {
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   error?: string;
@@ -5,20 +8,22 @@ interface Props {
   isRequired?: boolean;
   label: string;
   placeholder?: string;
+  rows?: number;
 }
 
 const classes = {
-  error: "font-normal text-red-600",
-  input: `flex items-center w-full text-neutral-900 border border-neutral-200
-      bg-neutral-50 rounded gap-x-2 py-2.5 px-3.5 text-ellipsis overflow-hidden
+  error: "font-normal text-red-600 self-start",
+  input: `resize-none text-neutral-900 border border-neutral-200
+      bg-neutral-50 rounded-lg py-3 px-3.5 text-ellipsis overflow-hidden
       font-normal placeholder-neutral-500 focus:outline-none focus:ring
       disabled:pointer-events-none disabled:border-neutral-100
       disabled:placeholder-neutral-400`,
-  inputError: "focus:ring-red-200 focus:border-red-600",
+  inputError: "border-red-300 focus:ring-red-200",
   inputFocus: "focus:ring-indigo-200 focus:border-indigo-600",
-  inputWrapper: "flex items-center relative",
-  label: `flex flex-col gap-y-1.5 font-medium text-sm text-neutral-700 w-full
-    max-w-[340px]`,
+  label:
+    "flex flex-col gap-y-1.5 font-medium text-sm text-neutral-700 w-full max-w-[340px]",
+  message: "self-end text-neutral-500",
+  messageError: "self-end text-red-600",
 };
 
 export default function TextArea({
@@ -28,27 +33,57 @@ export default function TextArea({
   isRequired,
   label,
   placeholder,
+  rows = 3,
 }: Props) {
+  const CHAR_COUNT_LIMIT = 500;
+  const [charCount, setCharCount] = useState(0);
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const value = event.target.value;
+    const currCharCount = value.length;
+    setCharCount(currCharCount);
+
+    if (onChange) {
+      onChange(event);
+    }
+  };
+
+  const overCharLimit = () => {
+    return charCount > CHAR_COUNT_LIMIT;
+  };
+
+  const setMessage = () => {
+    if (error) {
+      return <span className={classes.error}>{error}</span>;
+    } else {
+      return (
+        <span
+          className={`${overCharLimit() ? classes.messageError : classes.message}`}
+        >
+          {charCount}/{CHAR_COUNT_LIMIT}
+        </span>
+      );
+    }
+  };
+
   const inputClasses = `
     ${classes.input} 
-    ${error ? classes.inputError : classes.inputFocus} 
+    ${error || overCharLimit() ? classes.inputError : classes.inputFocus} 
   `;
 
   return (
     <label className={classes.label}>
       {label}
-      <div className={classes.inputWrapper}>
-        <textarea
-          aria-invalid={!!error}
-          aria-required={isRequired}
-          className={inputClasses}
-          disabled={isDisabled}
-          onChange={onChange}
-          placeholder={placeholder}
-          required={isRequired}
-        />
-      </div>
-      {error && <span className={classes.error}>{error}</span>}
+      <textarea
+        aria-invalid={!!error}
+        aria-required={isRequired}
+        className={inputClasses}
+        disabled={isDisabled}
+        onChange={handleChange}
+        placeholder={placeholder}
+        required={isRequired}
+        rows={rows}
+      />
+      {setMessage()}
     </label>
   );
 }
