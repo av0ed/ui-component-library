@@ -8,26 +8,26 @@ export const metadata: Metadata = {
 
 export default function TextInputPage() {
   return (
-    <div className="flex flex-col gap-y-12 justify-start items-center my-28 h-screen">
+    <div className="flex flex-col gap-y-12 justify-start items-center my-28 px-4">
       <TextInput
         IconRight={RiQuestionLine}
         label="Email"
         placeholder="name@email.com"
         type="email"
-        hint="This is a hint text."
+        hint="Here's some hint text."
       />
       <TextInput
         IconRight={RiQuestionLine}
         label="Email"
         placeholder="name@email.com"
         type="email"
-        hint="This is a hint text."
+        hint="Here's some more hint text."
       />
       <TextInput
         IconRight={RiQuestionLine}
         label="Email"
         placeholder="name@email.com"
-        hint="This is a hint text."
+        hint="This is a disabled input."
         type="email"
         isDisabled={true}
       />

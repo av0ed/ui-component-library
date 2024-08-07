@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 export default function TestimonialCardPage() {
   return (
-    <div className="flex items-start justify-center pt-[200px] bg-gradient-haze h-screen">
+    <div className="flex flex-1 items-start justify-center py-[200px] px-4 bg-gradient-haze">
       <TestimonialCard
         name="Sarah Dole"
         username="@sarahdole"

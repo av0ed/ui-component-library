@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
+import Footer from "./_components/footer";
 import "./globals.css";
 
 const notoSans = Noto_Sans({
@@ -19,9 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${notoSans.className} h-full bg-white`}>
-        {children}
+    <html lang="en" className="h-full">
+      <body className={`${notoSans.className} flex flex-col h-full bg-white`}>
+        <main className="flex flex-col flex-nowrap flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

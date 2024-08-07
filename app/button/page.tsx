@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function ButtonPage() {
   return (
-    <div className="h-screen flex flex-col items-center py-28 px-6 md:px-8 lg:px-0">
+    <div className="flex flex-col items-center py-28 px-6 md:px-8 lg:px-0">
       <div className="flex flex-col justify-center items-start gap-y-12">
         <div className="flex flex-row flex-wrap items-center gap-5">
           <Button classes="btn--md btn--primary" text="Button CTA" />

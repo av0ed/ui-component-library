@@ -24,12 +24,12 @@ export const metadata: Metadata = {
 
 export default function IconButtonPage() {
   return (
-    <div className="h-screen flex flex-col items-center py-28 px-6 md:px-8 lg:px-0">
+    <div className="flex flex-col items-center py-28 px-6 md:px-8 lg:px-0">
       <div className="flex flex-col justify-center items-start gap-y-12">
         {iconButtonVariants.map((variant, idx) => (
           <div
             key={`${variant}_${idx}`}
-            className="flex flex-row items-center gap-x-6"
+            className="flex flex-row flex-wrap items-center gap-6"
           >
             {iconButtonSizes.map((size) => (
               <IconButton
