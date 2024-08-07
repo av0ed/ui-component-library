@@ -6,9 +6,14 @@ import {
   RiGithubLine,
   RiTwitterXLine,
 } from "@remixicon/react";
-import { makeLink } from "../_utilities/helpers";
 
-const pages = ["Features", "Pricing", "About Us", "Contact"];
+const pages = [
+  { id: 0, page: "Home", href: "/" },
+  { id: 1, page: "Features", href: "/" },
+  { id: 2, page: "Pricing", href: "/" },
+  { id: 3, page: "About Us", href: "team-section" },
+  { id: 4, page: "Contact", href: "/" },
+];
 
 const socialLinks = [
   { id: 0, Icon: RiYoutubeLine, href: "/" },
@@ -28,11 +33,11 @@ const classes = {
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center text-sm font-medium py-12 md:py-16 lg:py-24 px-8 lg:px-24 w-full w-screen-sm md:w-screen-md">
+    <footer className="flex flex-col items-center justify-center border border-t-gray-300 text-sm font-medium py-12 md:py-16 lg:py-24 px-8 lg:px-24 w-full w-screen-sm md:w-screen-md">
       <ul className="flex flex-row flex-nowrap gap-x-4 md:gap-x-6">
-        {pages.map((page) => (
-          <li key={page}>
-            <Link className={classes.pageLink} href={makeLink(page)}>
+        {pages.map(({ id, page, href }) => (
+          <li key={id}>
+            <Link className={classes.pageLink} href={href}>
               {page}
             </Link>
           </li>

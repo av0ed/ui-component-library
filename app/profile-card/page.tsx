@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ProfileCardPage() {
   return (
-    <div className="flex justify-center items-start pt-[200px] h-screen bg-gradient-haze">
+    <div className="flex flex-1 justify-center items-start py-[200px] px-4 bg-gradient-haze">
       <ProfileCard
         name="Sarah Dole"
         role="Front End Engineer @ Microsoft"

@@ -1,14 +1,13 @@
-import Link from "next/link";
 import Image from "next/image";
 import Button from "./_components/button";
 import abstractBackground from "../public/abstract-background.jpg";
 
 export default function NotFound() {
   return (
-    <section className="flex flex-col justify-center h-screen">
+    <section className="h-full flex flex-col justify-center">
       <Image
         alt="An abstract, flowing background"
-        className="fixed h-screen w-screen overflow-hidden -z-10"
+        className="fixed overflow-hidden -z-10"
         fill
         quality={25}
         src={abstractBackground}

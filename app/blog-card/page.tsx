@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 export default function BlogCardPage() {
   return (
-    <div className="flex items-start justify-center pt-[120px] bg-gradient-haze h-screen">
+    <div className="flex flex-1 items-start justify-center py-[120px] px-4 bg-gradient-haze">
       <BlogCard
         headline="Top 5 Living Room Inspirations"
         subHeadline="Curated vibrants colors for your living, make it pop & calm in the same time."

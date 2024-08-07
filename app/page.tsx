@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Footer from "./_components/footer";
 import { makeLink } from "./_utilities/helpers";
 
 export default function Home() {
@@ -9,24 +8,18 @@ export default function Home() {
     "Button",
     "Blog Card",
     "Icon Button",
-    "Footer",
     "Profile Card",
     "Team Section",
     "Testimonial Card",
     "Text Input",
   ];
   return (
-    <main className="h-screen flex flex-col flex-nowrap">
-      <ul>
-        {pages.map((page) => (
-          <li key={page}>
-            <Link href={makeLink(page)}>{page}</Link>
-          </li>
-        ))}
-      </ul>
-      <div className="mt-auto">
-        <Footer />
-      </div>
-    </main>
+    <ul className="flex flex-col flex-nowrap">
+      {pages.map((page) => (
+        <li key={page}>
+          <Link href={makeLink(page)}>{page}</Link>
+        </li>
+      ))}
+    </ul>
   );
 }
