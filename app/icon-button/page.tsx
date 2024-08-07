@@ -14,12 +14,15 @@ const iconButtonVariants = [
   "icon--btn--secondary",
   "icon--btn--tertiary",
   "icon--btn--destructive",
-  "icon--btn--disabled--gray",
-  "icon--btn--disabled--white",
+];
+
+const makeDisabledButtonVariants = [
+  "icon--btn--primary",
+  "icon--btn--tertiary",
 ];
 
 export const metadata: Metadata = {
-  title: "IconButton | UI Component Library | Jason Long",
+  title: "Icon Button | UI Component Library | Jason Long",
 };
 
 export default function IconButtonPage() {
@@ -37,6 +40,22 @@ export default function IconButtonPage() {
                 key={`${variant}_${size}`}
                 classes={`${size} ${variant}`}
                 href="/"
+              />
+            ))}
+          </div>
+        ))}
+        {makeDisabledButtonVariants.map((variant, idx) => (
+          <div
+            key={`${variant}_${idx}`}
+            className="flex flex-row flex-wrap items-center gap-6"
+          >
+            {iconButtonSizes.map((size) => (
+              <IconButton
+                Icon={RiMessage2Line}
+                key={`${variant}_${size}`}
+                classes={`${size} ${variant}`}
+                href="/"
+                isDisabled={true}
               />
             ))}
           </div>

@@ -11,6 +11,7 @@ export default function Home() {
     "Profile Card",
     "Team Section",
     "Testimonial Card",
+    "Text Area",
     "Text Input",
   ];
   return (

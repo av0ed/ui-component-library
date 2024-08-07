@@ -66,6 +66,7 @@ export default function TextInput({
           onChange={onChange}
           placeholder={placeholder}
           required={isRequired}
+          tabIndex={isDisabled ? -1 : 0}
           type={type}
         />
         {IconRight && (
@@ -74,7 +75,7 @@ export default function TextInput({
           />
         )}
       </div>
-      {hint && !error && <span className={classes.hint}>{hint}</span>}
+      {!error && hint && <span className={classes.hint}>{hint}</span>}
       {error && <span className={classes.error}>{error}</span>}
     </label>
   );

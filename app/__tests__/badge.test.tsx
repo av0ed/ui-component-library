@@ -4,10 +4,11 @@ import { describe, it, expect } from "vitest";
 import Badge from "../_components/badge";
 
 /*
- * I've seen conflicting opinions on testing props, but lean towards the
- * opinion that testing props is largely akin to testing React itself - as
- * opposed to app-specific behavior. I'll leave these here since they're already
- * written and not "hurting" anything, but I don't think I'd write these again.
+ * I've seen conflicting opinions on testing props. I lean towards the opinion
+ * that testing props is akin to testing React itself, as opposed to testing
+ * app-specific behavior. I'm leaving these here since they're already written,
+ * but I don't think I'd write these again as the user does not interact with
+ * badges.
  * */
 describe("Badge", () => {
   it("sets default text", () => {
