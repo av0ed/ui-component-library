@@ -82,6 +82,7 @@ export default function TextArea({
         placeholder={placeholder}
         required={isRequired}
         rows={rows}
+        tabIndex={isDisabled ? -1 : 0}
       />
       {setMessage()}
     </label>
