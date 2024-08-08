@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Button from "../_components/button";
 import {
   RiYoutubeLine,
   RiInstagramLine,
@@ -26,7 +26,7 @@ const socialLinks = [
 const classes = {
   pageLink:
     "text-neutral-600 hover:text-neutral-900 focus:outline-none focus:rounded focus:ring focus:ring-indigo-200",
-  socialIcon: "text-neutral-400 h-6 w-6",
+  socialIcon: "link--md link--secondary",
   socialLink:
     "inline-flex focus:outline-none focus:rounded focus:ring focus:ring-indigo-200",
 };
@@ -37,9 +37,7 @@ export default function Footer() {
       <ul className="flex flex-row flex-nowrap gap-x-4 md:gap-x-6">
         {pages.map(({ id, page, href }) => (
           <li key={id}>
-            <Link className={classes.pageLink} href={href}>
-              {page}
-            </Link>
+            <Button classes={classes.pageLink} href={href} text={page} />
           </li>
         ))}
       </ul>

@@ -1,3 +1,3 @@
 export const makeLink = (title: string) => {
-  return title.toLowerCase().replace(" ", "-");
+  return title.toLowerCase().replaceAll(" ", "-");
 };
