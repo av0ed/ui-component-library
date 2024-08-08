@@ -3,7 +3,7 @@ import { RemixiconComponentType } from "@remixicon/react";
 
 interface Props {
   Icon: RemixiconComponentType;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   ariaLabel?: string;
   classes?: string;
   href?: string;

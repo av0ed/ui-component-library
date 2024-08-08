@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../_components/button";
@@ -15,19 +16,7 @@ const pages = [
 
 function NavMenu() {
   return (
-    <nav className="flex flex-col pt-8 px-4 pb-4">
-      <div className="flex flex-row items-center">
-        <Link className="flex flex-row items-center" href="/">
-          <Image
-            src="/abstractly-logo.svg"
-            height={32}
-            width={32}
-            alt="Abstractly logo"
-          />
-          <span className="text-neutral-900 font-bold px-1">Abstractly</span>
-        </Link>
-        <IconButton Icon={RiCloseLine} classes="ml-auto text-neutral-600" />
-      </div>
+    <div className="flex flex-col pb-4">
       <ul className="flex flex-col mt-6 gap-y-2">
         {pages.map(({ id, page, href }) => (
           <li className="py-2 px-3" key={id}>
@@ -46,17 +35,21 @@ function NavMenu() {
           text="Try it out"
         />
       </div>
-    </nav>
+    </div>
   );
 }
 
 export default function Navbar() {
-  const handleClick = () => {
-    console.log("Hi");
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault;
+    setShowMenu(!showMenu);
   };
+
   return (
-    <div className=" pt-4 lg:px-28">
-      <nav className="h-[68px] flex flex-row items-center px-4">
+    <div className="pt-4 mx-auto w-full max-w-screen-sm md:max-w-screen-md px-4 md:px-8 lg:px-28 lg:max-w-screen-lg">
+      <nav className="h-[68px] flex flex-row items-center">
         <Link className="flex flex-row items-center" href="/">
           <Image
             src="/abstractly-logo.svg"
@@ -66,41 +59,21 @@ export default function Navbar() {
           />
           <span className="text-neutral-900 font-bold px-1">Abstractly</span>
         </Link>
-        <IconButton
-          Icon={RiMenuLine}
-          classes="ml-auto text-neutral-600"
-          onClick={handleClick}
-        />
+        {showMenu ? (
+          <IconButton
+            Icon={RiCloseLine}
+            onClick={handleClick}
+            classes="ml-auto text-neutral-600"
+          />
+        ) : (
+          <IconButton
+            Icon={RiMenuLine}
+            classes="ml-auto text-neutral-600"
+            onClick={handleClick}
+          />
+        )}
       </nav>
+      {showMenu && <NavMenu />}
     </div>
   );
 }
-//
-// export default function Navbar() {
-//   const pages = [
-//     "404 Section",
-//     "Badge",
-//     "Button",
-//     "Blog Card",
-//     "Hero Section Simple",
-//     "Icon Button",
-//     "Profile Card",
-//     "Team Section",
-//     "Testimonial Card",
-//     "Text Area",
-//     "Text Input",
-//   ];
-//   return (
-//     <ul className="flex flex-row p-4 justify-center gap-x-8 flex-nowrap">
-//       {pages.map((page) => (
-//         <li key={page}>
-//           <Button
-//             classes="link--lg link--primary"
-//             href={makeLink(page)}
-//             text={page}
-//           />
-//         </li>
-//       ))}
-//     </ul>
-//   );
-// }
