@@ -3,14 +3,16 @@ import { RemixiconComponentType } from "@remixicon/react";
 
 interface Props {
   Icon: RemixiconComponentType;
+  onClick?: () => void;
   ariaLabel?: string;
   classes?: string;
-  href: string;
+  href?: string;
   isDisabled?: boolean;
 }
 
 export default function IconButton({
   Icon,
+  onClick,
   ariaLabel,
   classes = "icon--btn--md icon--btn--primary",
   href,
@@ -24,7 +26,7 @@ export default function IconButton({
     ? "icon--btn--disabled--gray"
     : "icon--btn--disabled--white";
 
-  return (
+  return href ? (
     <Link
       aria-disabled={isDisabled ? true : false}
       aria-label={ariaLabel}
@@ -34,5 +36,15 @@ export default function IconButton({
     >
       {Icon && <Icon />}
     </Link>
+  ) : (
+    <button
+      aria-disabled={isDisabled ? true : false}
+      className={classes}
+      disabled={isDisabled}
+      onClick={onClick}
+      tabIndex={isDisabled ? -1 : 0}
+    >
+      {Icon && <Icon />}
+    </button>
   );
 }
