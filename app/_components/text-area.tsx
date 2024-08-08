@@ -18,7 +18,7 @@ const classes = {
       font-normal placeholder-neutral-500 focus:outline-none focus:ring
       disabled:pointer-events-none disabled:border-neutral-100
       disabled:placeholder-neutral-400`,
-  inputError: "border-red-300 focus:ring-red-200",
+  inputError: "border-red-300 focus:border-red-600 focus:ring-red-200",
   inputFocus: "focus:ring-indigo-200 focus:border-indigo-600",
   label:
     "flex flex-col gap-y-1.5 font-medium text-sm text-neutral-700 w-full max-w-[340px]",
