@@ -18,9 +18,9 @@ function NavMenu() {
   return (
     <nav
       aria-label="mainmenulabel"
-      className="w-full flex flex-col lg:flex-row pb-4 lg:pb-0 lg:gap-x-24"
+      className="flex flex-col lg:flex-row mx-auto px-4 pb-4 pt-8 md:px-8 lg:p-0 lg:m-0 max-w-screen-sm md:max-w-screen-md lg:max-w-full lg:grow"
     >
-      <ul className="flex flex-col lg:flex-row lg:items-center mt-6 lg:mt-0 gap-y-2 lg:gap-x-8">
+      <ul className="flex flex-col grow lg:flex-row lg:items-center gap-y-2 lg:gap-x-8">
         {pages.map(({ id, page, href }) => (
           <li className="py-2 px-3 lg:p-0" key={id}>
             <Button
@@ -31,10 +31,13 @@ function NavMenu() {
           </li>
         ))}
       </ul>
-      <div className="flex flex-col md:flex-row mt-6 lg:mt-0 lg:ml-auto">
-        <Button classes="btn--xl btn--secondary" text="Learn more" />
+      <div className="flex flex-col md:flex-row mt-6 lg:mt-0">
         <Button
-          classes="btn--xl btn--primary mt-4 md:mt-0 md:ml-4"
+          classes="btn--xl btn--secondary md:w-1/2 lg:w-auto"
+          text="Learn more"
+        />
+        <Button
+          classes="btn--xl btn--primary md:w-1/2 lg:w-auto mt-4 md:mt-0 md:ml-4"
           text="Try it out"
         />
       </div>
@@ -51,17 +54,19 @@ export default function Navbar() {
   };
 
   return (
-    <header className="pt-4 mx-auto w-full max-w-screen-sm md:max-w-screen-md px-4 md:px-8 lg:px-28 lg:max-w-screen-lg">
-      <div className="h-[68px] flex flex-row items-center lg:gap-x-24">
+    <header className="relative pt-4 w-full ">
+      <div className="h-[68px] mx-auto flex flex-row items-center px-4 md:px-8 lg:px-28 lg:gap-x-24 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg">
+      <div className="flex flex-col">
         <Link className="flex flex-row items-center" href="/">
-          <Image
-            src="/abstractly-logo.svg"
-            height={32}
-            width={32}
-            alt="Abstractly logo"
-          />
+        <Image
+          src="/abstractly-logo.svg"
+          height={32}
+          width={32}
+          alt="Abstractly logo"
+        />
           <span className="text-neutral-900 font-bold px-1">Abstractly</span>
         </Link>
+        </div>
         {showMenu ? (
           <IconButton
             Icon={RiCloseLine}
@@ -75,11 +80,13 @@ export default function Navbar() {
             onClick={handleClick}
           />
         )}
-        <div className="hidden lg:flex lg:w-full">
+        <div className="hidden lg:flex lg:grow">
           <NavMenu />
         </div>
       </div>
-      <div className="lg:hidden">{showMenu && <NavMenu />}</div>
+      <div className="w-full absolute bg-white left-0 lg:hidden">
+        {showMenu && <NavMenu />}
+      </div>
     </header>
   );
 }
