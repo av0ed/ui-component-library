@@ -64,7 +64,9 @@ export default function Navbar() {
               width={32}
               alt="Abstractly logo"
             />
-            <span className="text-neutral-900 font-bold px-1">Abstractly</span>
+            <span className="text-neutral-900 font-bold px-1 -tracking-widest">
+              Abstractly
+            </span>
           </Link>
         </div>
         {showMenu ? (

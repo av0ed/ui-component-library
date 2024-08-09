@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
-import HeroSectionSimple from "../_components/hero-section-simple";
+import HeroSection from "../_components/hero-section";
 
 export const metadata: Metadata = {
-  title: "Hero Section (Simple) | UI Component Library | Jason Long",
+  title: "Hero Section | UI Component Library | Jason Long",
 };
-export default function HeroSectionSimplePage() {
-  return <HeroSectionSimple />;
+export default function HeroSectionPage() {
+  return (
+    <HeroSection
+      heading="Well-crafted abstract images"
+      subHeading="High-quality abstract images for your projects, wallpaper, and presentations."
+      imageSrc="/hero-simple.png"
+      imageAlt="Abstract, floating cubes"
+    />
+  );
 }
