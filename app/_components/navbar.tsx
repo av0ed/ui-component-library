@@ -16,10 +16,10 @@ const pages = [
 
 function NavMenu() {
   return (
-    <div className="flex flex-col pb-4">
-      <ul className="flex flex-col mt-6 gap-y-2">
+    <div className="w-full flex flex-col lg:flex-row pb-4 lg:pb-0 lg:gap-x-24">
+      <ul className="flex flex-col lg:flex-row lg:items-center mt-6 lg:mt-0 gap-y-2 lg:gap-x-8">
         {pages.map(({ id, page, href }) => (
-          <li className="py-2 px-3" key={id}>
+          <li className="py-2 px-3 lg:p-0" key={id}>
             <Button
               classes="link--xl link--secondary"
               href={href}
@@ -28,7 +28,7 @@ function NavMenu() {
           </li>
         ))}
       </ul>
-      <div className="flex flex-col md:flex-row mt-6">
+      <div className="flex flex-col md:flex-row mt-6 lg:mt-0 lg:ml-auto">
         <Button classes="btn--xl btn--secondary" text="Learn more" />
         <Button
           classes="btn--xl btn--primary mt-4 md:mt-0 md:ml-4"
@@ -49,7 +49,7 @@ export default function Navbar() {
 
   return (
     <div className="pt-4 mx-auto w-full max-w-screen-sm md:max-w-screen-md px-4 md:px-8 lg:px-28 lg:max-w-screen-lg">
-      <nav className="h-[68px] flex flex-row items-center">
+      <nav className="h-[68px] flex flex-row items-center lg:gap-x-24">
         <Link className="flex flex-row items-center" href="/">
           <Image
             src="/abstractly-logo.svg"
@@ -72,7 +72,9 @@ export default function Navbar() {
             onClick={handleClick}
           />
         )}
-        here
+        <div className="hidden lg:flex lg:w-full">
+          <NavMenu />
+        </div>
       </nav>
       <div className="lg:hidden">{showMenu && <NavMenu />}</div>
     </div>
