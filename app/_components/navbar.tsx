@@ -16,7 +16,10 @@ const pages = [
 
 function NavMenu() {
   return (
-    <div className="w-full flex flex-col lg:flex-row pb-4 lg:pb-0 lg:gap-x-24">
+    <nav
+      aria-label="mainmenulabel"
+      className="w-full flex flex-col lg:flex-row pb-4 lg:pb-0 lg:gap-x-24"
+    >
       <ul className="flex flex-col lg:flex-row lg:items-center mt-6 lg:mt-0 gap-y-2 lg:gap-x-8">
         {pages.map(({ id, page, href }) => (
           <li className="py-2 px-3 lg:p-0" key={id}>
@@ -35,7 +38,7 @@ function NavMenu() {
           text="Try it out"
         />
       </div>
-    </div>
+    </nav>
   );
 }
 
@@ -48,8 +51,8 @@ export default function Navbar() {
   };
 
   return (
-    <div className="pt-4 mx-auto w-full max-w-screen-sm md:max-w-screen-md px-4 md:px-8 lg:px-28 lg:max-w-screen-lg">
-      <nav className="h-[68px] flex flex-row items-center lg:gap-x-24">
+    <header className="pt-4 mx-auto w-full max-w-screen-sm md:max-w-screen-md px-4 md:px-8 lg:px-28 lg:max-w-screen-lg">
+      <div className="h-[68px] flex flex-row items-center lg:gap-x-24">
         <Link className="flex flex-row items-center" href="/">
           <Image
             src="/abstractly-logo.svg"
@@ -75,8 +78,8 @@ export default function Navbar() {
         <div className="hidden lg:flex lg:w-full">
           <NavMenu />
         </div>
-      </nav>
+      </div>
       <div className="lg:hidden">{showMenu && <NavMenu />}</div>
-    </div>
+    </header>
   );
 }
