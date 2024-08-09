@@ -63,17 +63,18 @@ export default function Navbar() {
           <IconButton
             Icon={RiCloseLine}
             onClick={handleClick}
-            classes="ml-auto text-neutral-600"
+            classes="ml-auto text-neutral-600 lg:hidden"
           />
         ) : (
           <IconButton
             Icon={RiMenuLine}
-            classes="ml-auto text-neutral-600"
+            classes="ml-auto text-neutral-600 lg:hidden"
             onClick={handleClick}
           />
         )}
+        here
       </nav>
-      {showMenu && <NavMenu />}
+      <div className="lg:hidden">{showMenu && <NavMenu />}</div>
     </div>
   );
 }
