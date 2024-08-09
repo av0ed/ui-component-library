@@ -54,18 +54,18 @@ export default function Navbar() {
   };
 
   return (
-    <header className="relative pt-4 w-full ">
+    <header className="sticky top-0 bg-white pt-4 w-full">
       <div className="h-[68px] mx-auto flex flex-row items-center px-4 md:px-8 lg:px-28 lg:gap-x-24 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg">
-      <div className="flex flex-col">
-        <Link className="flex flex-row items-center" href="/">
-        <Image
-          src="/abstractly-logo.svg"
-          height={32}
-          width={32}
-          alt="Abstractly logo"
-        />
-          <span className="text-neutral-900 font-bold px-1">Abstractly</span>
-        </Link>
+        <div className="flex flex-col">
+          <Link className="flex flex-row items-center" href="/">
+            <Image
+              src="/abstractly-logo.svg"
+              height={32}
+              width={32}
+              alt="Abstractly logo"
+            />
+            <span className="text-neutral-900 font-bold px-1">Abstractly</span>
+          </Link>
         </div>
         {showMenu ? (
           <IconButton
