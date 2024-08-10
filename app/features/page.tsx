@@ -78,9 +78,9 @@ export default function FeaturesPage() {
           <div className="grid grid-cols-1 items-start justify-center gap-y-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3 mt-12 md:mt-16 lg:gap-y-12 lg:gap-x-8">
             {features.map(({ id, icon, feature, description }) => (
               <FeatureCard
-                align="col"
                 key={id}
                 Icon={icon}
+                iconAlign="row"
                 feature={feature}
                 description={description}
               />

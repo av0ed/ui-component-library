@@ -2,43 +2,47 @@ import { RemixiconComponentType } from "@remixicon/react";
 
 interface Props {
   Icon: RemixiconComponentType;
-  align: "col" | "row";
+  iconAlign: "col" | "row";
   description: string;
   feature: string;
 }
 
 const classes = {
   col: {
-    container:
-      "flex flex-col justify-start items-center w-full max-w-screen-sm",
-    description: "text-center text-neutral-600 mt-2",
-    feature: "text-xl text-neutral-900 font-semibold mt-5",
-    icon: "text-indigo-700 h-6 w-6",
-    iconWrapper:
-      "flex items-center justify-center h-12 w-12 rounded-full shadow",
+    container: "flex-col items-center",
+    contentWrapper: "items-center",
+    description: "text-center",
   },
   row: {
-    container: "flex flex-row",
-    description: "",
-    feature: "",
-    icon: "",
-    iconWrapper: "",
+    container: "flex-row",
+    contentWrapper: "py-2.5",
+    description: "text-left",
   },
 };
 
 export default function FeatureCard({
   Icon,
-  align,
+  iconAlign,
   description,
   feature,
 }: Props) {
   return (
-    <li className={classes[align].container}>
-      <div className={classes[align].iconWrapper}>
-        {Icon && <Icon className={classes[align].icon} />}
+    <li
+      className={`flex w-full gap-5 max-w-screen-sm ${classes[iconAlign].container}`}
+    >
+      <div className="flex items-center justify-center h-12 w-12 rounded-full shadow shrink-0">
+        {Icon && <Icon className="text-indigo-700 h-6 w-6" />}
       </div>
-      <span className={classes[align].feature}>{feature}</span>
-      <p className={classes[align].description}>{description}</p>
+      <div
+        className={`flex flex-col gap-y-2 ${classes[iconAlign].contentWrapper}`}
+      >
+        <span className="text-xl text-neutral-900 font-semibold">
+          {feature}
+        </span>
+        <p className={`text-neutral-600 ${classes[iconAlign].description}`}>
+          {description}
+        </p>
+      </div>
     </li>
   );
 }
