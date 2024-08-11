@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 };
 
 // Same layout as TeamPage?
-export default function FeaturesPage() {
+export default function FeaturesSectionGridPage() {
   return (
     <div className="h-full p-4 bg-gradient-haze">
       <div className="w-full h-full bg-white">
@@ -80,7 +80,7 @@ export default function FeaturesPage() {
               <FeatureCard
                 key={id}
                 Icon={icon}
-                iconAlign="row"
+                iconAlign="col"
                 feature={feature}
                 description={description}
               />
