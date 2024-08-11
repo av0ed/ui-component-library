@@ -1,6 +1,6 @@
 @layer components {
   .__btn--base {
-    @apply flex flex-nowrap items-center justify-center shrink-0 text-sm font-medium rounded p-2.5 focus:outline-none focus:ring;
+    @apply flex flex-nowrap items-center justify-center shrink-0 text-sm font-medium rounded p-2.5 transition-colors ease-in-out focus:outline-none focus:ring;
     svg {
       @apply h-5 w-5 p-0.375;
     }
