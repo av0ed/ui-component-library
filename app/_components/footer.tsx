@@ -9,7 +9,7 @@ import {
 
 const pages = [
   { id: 0, page: "Home", href: "/" },
-  { id: 1, page: "Features", href: "/features" },
+  { id: 1, page: "Features", href: "/features-section-grid" },
   { id: 2, page: "Pricing", href: "/" },
   { id: 3, page: "About Us", href: "team-section" },
   { id: 4, page: "Contact", href: "/" },
