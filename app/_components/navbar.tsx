@@ -27,8 +27,9 @@ export default function Navbar() {
   function NavMenu() {
     return (
       <nav
-        aria-label="mainmenulabel"
+        aria-label="Site navigation panel"
         className="flex flex-col lg:flex-row mx-auto px-4 pb-4 pt-8 md:px-8 lg:p-0 lg:m-0 max-w-screen-sm md:max-w-screen-md lg:max-w-full lg:grow"
+        role="navigation"
       >
         <ul className="flex flex-col grow lg:flex-row lg:items-center gap-y-2 lg:gap-x-8">
           {pages.map(({ id, page, href }) => (
@@ -62,7 +63,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 bg-white pt-4 w-full shadow-md">
-      <div className="h-[68px] mx-auto flex flex-row items-center px-4 md:px-8 lg:px-28 lg:gap-x-24 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg">
+      <div className="h-[68px] mx-auto flex flex-row items-center px-4 md:px-8 lg:px-28 lg:gap-x-24 max-w-screen-lg">
         <div className="flex flex-col">
           <Link className="flex flex-row items-center" href="/">
             <Image
@@ -80,13 +81,17 @@ export default function Navbar() {
           <IconButton
             Icon={RiCloseLine}
             onClick={handleClick}
+            ariaExpanded={!!showMenu ? true : false}
+            ariaLabel="Close site navigation panel"
             classes="ml-auto text-neutral-600 lg:hidden"
           />
         ) : (
           <IconButton
             Icon={RiMenuLine}
-            classes="ml-auto text-neutral-600 lg:hidden"
             onClick={handleClick}
+            ariaExpanded={!!showMenu ? true : false}
+            ariaLabel="Expand site navigation panel"
+            classes="ml-auto text-neutral-600 lg:hidden"
           />
         )}
         <div className="hidden lg:flex lg:grow">

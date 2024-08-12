@@ -4,6 +4,7 @@ import { RemixiconComponentType } from "@remixicon/react";
 interface IconButtonProps {
   Icon: RemixiconComponentType;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  ariaExpanded?: boolean;
   ariaLabel?: string;
   classes?: string;
   href?: string;
@@ -13,6 +14,7 @@ interface IconButtonProps {
 export default function IconButton({
   Icon,
   onClick,
+  ariaExpanded,
   ariaLabel,
   classes = "icon--btn--md icon--btn--primary",
   href,
@@ -28,7 +30,6 @@ export default function IconButton({
 
   return href ? (
     <Link
-      aria-disabled={isDisabled ? true : false}
       aria-label={ariaLabel}
       className={`${classes} ${isDisabled ? disabledClass : ""}`}
       href={href}
@@ -38,10 +39,11 @@ export default function IconButton({
     </Link>
   ) : (
     <button
-      aria-disabled={isDisabled ? true : false}
+      aria-expanded={ariaExpanded}
+      aria-label={ariaLabel}
       className={classes}
       disabled={isDisabled}
-      onClick={onClick}
+      onClick={isDisabled ? undefined : onClick}
       tabIndex={isDisabled ? -1 : 0}
     >
       {Icon && <Icon />}
