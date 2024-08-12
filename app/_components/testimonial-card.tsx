@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-interface Props {
+interface TestimonialCardProps {
   name: string;
   username: string;
   testimonial: string;
@@ -14,7 +14,7 @@ export default function TestimonialCard({
   testimonial,
   imageSrc,
   imageAlt,
-}: Props) {
+}: TestimonialCardProps) {
   return (
     <figure className="w-[340px] p-6 border-l border-r border-b border-neutral-200 bg-white flex flex-col rounded-lg shadow shadow-neutral-200 gap-y-4">
       <div className="flex flex-row gap-x-4">

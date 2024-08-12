@@ -2,7 +2,7 @@ import Button from "../_components/button";
 import Image from "next/image";
 import ChecklistItem from "../_components/checklist-item";
 
-interface Props {
+interface HeroSectionProps {
   featureList?: string[];
   heading: string;
   imageAlt: string;
@@ -16,7 +16,7 @@ export default function HeroSection({
   imageAlt,
   imageSrc,
   subHeading,
-}: Props) {
+}: HeroSectionProps) {
   return (
     <div className="h-full p-4 bg-gradient-haze">
       <div className="h-full flex flex-col rounded justify-center items-center bg-white">

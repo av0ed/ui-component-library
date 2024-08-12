@@ -1,10 +1,10 @@
 import { RiCheckFill } from "@remixicon/react";
 
-interface Props {
+interface ChecklistItemProps {
   text: string;
 }
 
-export default function ChecklistItem({ text }: Props) {
+export default function ChecklistItem({ text }: ChecklistItemProps) {
   return (
     <li className="flex flex-row gap-x-3">
       <RiCheckFill className="self-center w-6 h-6 bg-indigo-50 rounded-full fill-indigo-500" />

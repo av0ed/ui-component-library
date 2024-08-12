@@ -1,6 +1,6 @@
 import { RemixiconComponentType } from "@remixicon/react";
 
-interface Props {
+interface TextInputProps {
   IconLeft?: RemixiconComponentType;
   IconRight?: RemixiconComponentType;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -43,7 +43,7 @@ export default function TextInput({
   label,
   placeholder,
   type,
-}: Props) {
+}: TextInputProps) {
   const inputClasses = `
     ${classes.input} 
     ${error ? classes.inputError : classes.inputFocus} 

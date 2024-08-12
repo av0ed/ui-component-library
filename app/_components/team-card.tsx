@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-interface Props {
+interface TeamCardProps {
   classes?: string;
   description: string;
   imageSrc: string;
@@ -16,7 +16,7 @@ export default function TeamCard({
   imageSrc,
   name,
   title,
-}: Props) {
+}: TeamCardProps) {
   return (
     <div
       className={`flex flex-col items-start w-full max-w-[340px] ${classes}`}

@@ -1,21 +1,21 @@
 import { RiArrowRightLine } from "@remixicon/react";
 import Badge from "../_components/badge";
 import Button from "../_components/button";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-interface Props {
+interface BlogCardProps {
+  imageAlt: string;
+  imageSrc: string | StaticImageData;
   headline: string;
   subHeadline: string;
-  imageSrc: string;
-  imageAlt: string;
 }
 
 export default function BlogCard({
+  imageAlt,
+  imageSrc,
   headline,
   subHeadline,
-  imageSrc,
-  imageAlt,
-}: Props) {
+}: BlogCardProps) {
   return (
     <article className="flex flex-col border-l border-r border-b border-neutral-200 shadow shadow-neutral-200 bg-white rounded-lg w-[340px]">
       <Image

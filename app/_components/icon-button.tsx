@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { RemixiconComponentType } from "@remixicon/react";
 
-interface Props {
+interface IconButtonProps {
   Icon: RemixiconComponentType;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   ariaLabel?: string;
@@ -17,7 +17,7 @@ export default function IconButton({
   classes = "icon--btn--md icon--btn--primary",
   href,
   isDisabled,
-}: Props) {
+}: IconButtonProps) {
   const shouldBeDisabledGray =
     classes.includes("icon--btn--primary") ||
     classes.includes("icon--btn--secondary");
