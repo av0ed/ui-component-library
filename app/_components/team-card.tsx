@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface TeamCardProps {
   classes?: string;
   description: string;
-  imageSrc: string;
   imageAlt: string;
+  imageSrc: string | StaticImageData;
   name: string;
   title: string;
 }
@@ -24,9 +24,9 @@ export default function TeamCard({
       <Image
         src={imageSrc}
         alt={imageAlt}
-        width={340}
-        height={296}
-        quality={60}
+        height={0}
+        width={0}
+        style={{ objectFit: "cover" }}
       />
       <span className="mt-6 text-neutral-900 text-xl font-semibold">
         {name}

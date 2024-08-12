@@ -1,4 +1,5 @@
 import HeroSection from "./_components/hero-section";
+import abstractCubes2 from "../public/abstract-cubes-2.png";
 
 const checklistItems = [
   "Minimum 5k image resolution",
@@ -9,10 +10,10 @@ const checklistItems = [
 export default function Home() {
   return (
     <HeroSection
-      featureList={checklistItems}
-      heading="Premium abstract images"
-      imageSrc="/abstract-cubes-2.png"
       imageAlt="Abstract, floating cubes"
+      imageSrc={abstractCubes2}
+      heading="Premium abstract images"
+      featureList={checklistItems}
     />
   );
 }

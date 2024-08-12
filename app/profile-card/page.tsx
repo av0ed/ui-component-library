@@ -17,12 +17,12 @@ export default function ProfileCardPage() {
   return (
     <div className="flex flex-1 justify-center items-start py-[200px] px-4 bg-gradient-haze">
       <ProfileCard
-        name="Sarah Dole"
-        role="Front End Engineer @ Microsoft"
         blurb="I turn coffee into bugs which are fixed by someone else. Certified Stack Overflow and ChatGPT developer."
         contactHref="/"
-        imageSrc={profileThumbnail}
         imageAlt="Headshot of Sarah Dole"
+        imageSrc={profileThumbnail}
+        name="Sarah Dole"
+        role="Front End Engineer @ Microsoft"
       >
         <div className="flex flex-row justify-center gap-x-4">
           <IconButton

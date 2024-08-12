@@ -19,11 +19,12 @@ export default function BlogCard({
   return (
     <article className="flex flex-col border-l border-r border-b border-neutral-200 shadow shadow-neutral-200 bg-white rounded-lg w-[340px]">
       <Image
-        className="rounded-t-lg object-cover"
-        src={imageSrc}
         alt={imageAlt}
-        height={288}
-        width={340}
+        className="rounded-t-lg object-cover"
+        height={0}
+        src={imageSrc}
+        style={{ objectFit: "cover" }}
+        width={0}
       />
       <div className="px-4 py-6">
         <Badge classes="badge--md badge--success" text="Interior" />
