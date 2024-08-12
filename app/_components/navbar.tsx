@@ -98,9 +98,11 @@ export default function Navbar() {
           <NavMenu />
         </div>
       </div>
-      <div className="w-full absolute shadow-md bg-white left-0 lg:hidden">
-        {showMenu && <NavMenu />}
-      </div>
+      {showMenu && (
+        <div className="w-full absolute shadow-md bg-white left-0 lg:hidden">
+          <NavMenu />
+        </div>
+      )}
     </header>
   );
 }
