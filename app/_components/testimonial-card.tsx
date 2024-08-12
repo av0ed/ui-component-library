@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface TestimonialCardProps {
-  name: string;
-  username: string;
-  testimonial: string;
-  imageSrc: string;
   imageAlt: string;
+  imageSrc: string | StaticImageData;
+  name: string;
+  testimonial: string;
+  username: string;
 }
 
 export default function TestimonialCard({

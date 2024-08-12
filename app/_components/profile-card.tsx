@@ -1,12 +1,12 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Button from "../_components/button";
 
 interface ProfileCardProps {
   blurb: string;
   children: React.ReactNode;
   contactHref: string;
-  imageSrc: string;
   imageAlt: string;
+  imageSrc: string | StaticImageData;
   name: string;
   role: string;
 }
