@@ -5,6 +5,9 @@ type IconAlign = "left" | "right" | "surround";
 
 interface Props {
   Icon?: RemixiconComponentType;
+  onClick?: (
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+  ) => void;
   ariaLabel?: string;
   classes: string;
   href?: string;
@@ -15,6 +18,7 @@ interface Props {
 
 export default function Button({
   Icon,
+  onClick,
   classes,
   href,
   iconAlign = "right",
@@ -47,11 +51,12 @@ export default function Button({
     <Link
       className={`${classes} ${isDisabled ? "btn--disabled" : ""}`}
       href={href}
+      onClick={onClick}
     >
       {renderContent()}
     </Link>
   ) : (
-    <button className={classes} disabled={isDisabled}>
+    <button className={classes} disabled={isDisabled} onClick={onClick}>
       {renderContent()}
     </button>
   );

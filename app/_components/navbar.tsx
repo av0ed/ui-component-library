@@ -9,52 +9,59 @@ import { RiCloseLine, RiMenuLine } from "@remixicon/react";
 const pages = [
   { id: 0, page: "Home", href: "/" },
   { id: 1, page: "Features", href: "/features-section-grid" },
-  { id: 2, page: "Pricing", href: "/" },
-  { id: 3, page: "About Us", href: "team-section" },
-  { id: 4, page: "Contact", href: "/" },
+  { id: 2, page: "Pricing", href: "/pricing-section-single" },
+  { id: 3, page: "About Us", href: "/team-section" },
+  { id: 4, page: "Contact", href: "/contact" },
 ];
-
-function NavMenu() {
-  return (
-    <nav
-      aria-label="mainmenulabel"
-      className="flex flex-col lg:flex-row mx-auto px-4 pb-4 pt-8 md:px-8 lg:p-0 lg:m-0 max-w-screen-sm md:max-w-screen-md lg:max-w-full lg:grow"
-    >
-      <ul className="flex flex-col grow lg:flex-row lg:items-center gap-y-2 lg:gap-x-8">
-        {pages.map(({ id, page, href }) => (
-          <li className="py-2 px-3 lg:p-0" key={id}>
-            <Button
-              classes="link--xl link--secondary"
-              href={href}
-              text={page}
-            />
-          </li>
-        ))}
-      </ul>
-      <div className="flex flex-col md:flex-row mt-6 lg:mt-0">
-        <Button
-          classes="btn--xl btn--secondary md:w-1/2 lg:w-auto"
-          text="Learn more"
-        />
-        <Button
-          classes="btn--xl btn--primary md:w-1/2 lg:w-auto mt-4 md:mt-0 md:ml-4"
-          text="Try it out"
-        />
-      </div>
-    </nav>
-  );
-}
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+  ) => {
     event.preventDefault;
     setShowMenu(!showMenu);
   };
 
+  function NavMenu() {
+    return (
+      <nav
+        aria-label="mainmenulabel"
+        className="flex flex-col lg:flex-row mx-auto px-4 pb-4 pt-8 md:px-8 lg:p-0 lg:m-0 max-w-screen-sm md:max-w-screen-md lg:max-w-full lg:grow"
+      >
+        <ul className="flex flex-col grow lg:flex-row lg:items-center gap-y-2 lg:gap-x-8">
+          {pages.map(({ id, page, href }) => (
+            <li className="py-2 px-3 lg:p-0" key={id}>
+              <Button
+                classes="link--xl link--secondary"
+                href={href}
+                text={page}
+                onClick={handleClick}
+              />
+            </li>
+          ))}
+        </ul>
+        <div className="flex flex-col md:flex-row mt-6 lg:mt-0">
+          <Button
+            classes="btn--xl btn--secondary md:w-1/2 lg:w-auto"
+            text="Learn more"
+            href="/"
+            onClick={handleClick}
+          />
+          <Button
+            classes="btn--xl btn--primary md:w-1/2 lg:w-auto mt-4 md:mt-0 md:ml-4"
+            text="Try it out"
+            href="/"
+            onClick={handleClick}
+          />
+        </div>
+      </nav>
+    );
+  }
+
   return (
-    <header className="sticky top-0 bg-white pt-4 w-full">
+    <header className="sticky top-0 bg-white pt-4 w-full shadow-md">
       <div className="h-[68px] mx-auto flex flex-row items-center px-4 md:px-8 lg:px-28 lg:gap-x-24 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg">
         <div className="flex flex-col">
           <Link className="flex flex-row items-center" href="/">
@@ -86,7 +93,7 @@ export default function Navbar() {
           <NavMenu />
         </div>
       </div>
-      <div className="w-full absolute bg-white left-0 lg:hidden">
+      <div className="w-full absolute shadow-md bg-white left-0 lg:hidden">
         {showMenu && <NavMenu />}
       </div>
     </header>

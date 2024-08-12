@@ -45,7 +45,7 @@ export default function HeroSection({
               <Button
                 classes="btn--xl md:btn--2xl btn--primary"
                 text="See pricing"
-                href="/"
+                href="/pricing-section-single"
               />
             </div>
           </div>
