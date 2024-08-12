@@ -1,6 +1,6 @@
 import { RemixiconComponentType } from "@remixicon/react";
 
-interface Props {
+interface FeatureCardProps {
   Icon: RemixiconComponentType;
   iconAlign: "col" | "row";
   description: string;
@@ -25,7 +25,7 @@ export default function FeatureCard({
   iconAlign,
   description,
   feature,
-}: Props) {
+}: FeatureCardProps) {
   return (
     <li
       className={`flex w-full gap-5 max-w-screen-sm md:max-w-screen-md ${classes[iconAlign].container}`}

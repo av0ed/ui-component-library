@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-interface Props {
-  name: string;
-  username: string;
-  testimonial: string;
-  imageSrc: string;
+interface TestimonialCardProps {
   imageAlt: string;
+  imageSrc: string | StaticImageData;
+  name: string;
+  testimonial: string;
+  username: string;
 }
 
 export default function TestimonialCard({
@@ -14,16 +14,16 @@ export default function TestimonialCard({
   testimonial,
   imageSrc,
   imageAlt,
-}: Props) {
+}: TestimonialCardProps) {
   return (
     <figure className="w-[340px] p-6 border-l border-r border-b border-neutral-200 bg-white flex flex-col rounded-lg shadow shadow-neutral-200 gap-y-4">
       <div className="flex flex-row gap-x-4">
         <Image
-          src={imageSrc}
           alt={imageAlt}
-          height={48}
-          width={48}
-          className="rounded-full"
+          className={`rounded-full h-12 w-12`}
+          height={0}
+          src={imageSrc}
+          width={0}
         />
         <div className="flex flex-col">
           <p className="text-neutral-900 text-lg font-semibold">{name}</p>

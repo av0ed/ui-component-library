@@ -1,13 +1,12 @@
-import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Button from "../_components/button";
 
-interface Props {
+interface ProfileCardProps {
   blurb: string;
   children: React.ReactNode;
   contactHref: string;
-  imageSrc: string;
   imageAlt: string;
+  imageSrc: string | StaticImageData;
   name: string;
   role: string;
 }
@@ -20,16 +19,16 @@ export default function ProfileCard({
   imageAlt,
   name,
   role,
-}: Props) {
+}: ProfileCardProps) {
   return (
     <div className="w-[340px] py-6 px-4 border-l border-r border-b border-neutral-300 bg-white flex flex-col rounded-lg shadow shadow-neutral-200 gap-y-10">
       <div className="flex flex-col items-center gap-y-6">
         <Image
-          src={imageSrc}
           alt={imageAlt}
-          height={64}
-          width={64}
-          className="rounded-full"
+          className="rounded-full h-16 w-16"
+          height={0}
+          src={imageSrc}
+          width={0}
         />
         <div className="flex flex-col items-center">
           <p className="text-neutral-900 text-xl font-medium">{name}</p>

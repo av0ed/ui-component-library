@@ -3,7 +3,7 @@ import { RemixiconComponentType } from "@remixicon/react";
 
 type IconAlign = "left" | "right" | "surround";
 
-interface Props {
+interface ButtonProps {
   Icon?: RemixiconComponentType;
   onClick?: (
     event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
@@ -24,7 +24,7 @@ export default function Button({
   iconAlign = "right",
   isDisabled,
   text,
-}: Props) {
+}: ButtonProps) {
   const renderLeftIcon = () => {
     if (Icon && (iconAlign === "left" || iconAlign === "surround")) {
       return <Icon />;

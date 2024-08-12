@@ -1,4 +1,4 @@
-interface Props {
+interface BadgeProps {
   ariaLabel?: string;
   classes?: string;
   role?: string;
@@ -10,7 +10,7 @@ export default function Badge({
   classes = "badge--md badge--neutral",
   role,
   text = "Label",
-}: Props) {
+}: BadgeProps) {
   return (
     <span className={classes} role={role} aria-label={ariaLabel}>
       {text}

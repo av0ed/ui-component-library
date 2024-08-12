@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-interface Props {
+interface TextAreaProps {
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   error?: string;
   isDisabled?: boolean;
@@ -34,7 +34,7 @@ export default function TextArea({
   label,
   placeholder,
   rows = 3,
-}: Props) {
+}: TextAreaProps) {
   const CHAR_COUNT_LIMIT = 500;
   const [charCount, setCharCount] = useState(0);
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
