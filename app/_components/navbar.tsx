@@ -47,13 +47,13 @@ export default function Navbar() {
           <Button
             classes="btn--xl btn--secondary md:w-1/2 lg:w-auto"
             text="Learn more"
-            href="/"
+            href="/features-section-side-image-right"
             onClick={handleClick}
           />
           <Button
             classes="btn--xl btn--primary md:w-1/2 lg:w-auto mt-4 md:mt-0 md:ml-4"
             text="Try it out"
-            href="/"
+            href="/pricing-section-single"
             onClick={handleClick}
           />
         </div>

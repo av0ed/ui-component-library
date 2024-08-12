@@ -40,7 +40,7 @@ export default function HeroSection({
               <Button
                 classes="btn--xl md:btn--2xl btn--secondary"
                 text="Learn more"
-                href="/"
+                href="/features-section-side-image-left"
               />
               <Button
                 classes="btn--xl md:btn--2xl btn--primary"
