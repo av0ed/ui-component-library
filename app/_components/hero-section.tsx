@@ -7,7 +7,7 @@ interface HeroSectionProps {
   heading: string;
   imageAlt: string;
   imageSrc: string | StaticImageData;
-  subHeading?: string;
+  subheading?: string;
 }
 
 export default function HeroSection({
@@ -15,7 +15,7 @@ export default function HeroSection({
   heading,
   imageAlt,
   imageSrc,
-  subHeading,
+  subheading,
 }: HeroSectionProps) {
   return (
     <div className="h-full flex flex-col rounded justify-center items-center">
@@ -32,7 +32,7 @@ export default function HeroSection({
             </ul>
           ) : (
             <p className="mt-4 md:mt-6 text-lg md:text-xl text-neutral-600">
-              {subHeading}
+              {subheading}
             </p>
           )}
           <div className="flex flex-row-reverse justify-end mt-8 md:justify-start md:flex-row md:mt-16 gap-x-4 md:gap-x-8">

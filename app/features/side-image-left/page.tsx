@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import FeatureCard from "../../_components/feature-card";
+import TextBanner from "../../_components/text-banner";
 import { RiRocket2Line, RiP2pLine, RiCopyrightLine } from "@remixicon/react";
 
 const features = [
@@ -31,18 +32,11 @@ export const metadata: Metadata = {
 export default function FeaturesSectionSideImagePage() {
   return (
     <div>
-      <div className="flex flex-col items-center md:px-10 lg:px-40">
-        <span className="text-base font-semibold text-indigo-700">
-          Best-in-class support
-        </span>
-        <h1 className="text-center mt-3 text-3xl font-semibold text-neutral-900 md:text-5xl">
-          Convenience and licensing that empowers
-        </h1>
-        <p className="mt-5 text-center text-xl text-neutral-600">
-          In a world where storytelling constantly evolves, don&apos;t let
-          licensing and poor support hold you down.
-        </p>
-      </div>
+      <TextBanner
+        eyebrow="Best-in-class support"
+        heading="Convenience and licensing that empowers"
+        subheading="In a world where storytelling constantly evolves, don't let licensing and poor support hold you down."
+      />
       <div className="flex flex-col-reverse gap-y-12 mt-12 md:mt-16 lg:gap-y-0 lg:flex-row-reverse lg:w-full lg:gap-x-8">
         <div className="flex flex-col items-start justify-center gap-y-10 lg:w-1/2">
           {features.map(({ id, icon, feature, description }) => (

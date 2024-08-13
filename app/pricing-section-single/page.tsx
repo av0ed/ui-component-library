@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Badge from "../_components/badge";
 import Button from "../_components/button";
 import ChecklistItem from "../_components/checklist-item";
+import TextBanner from "../_components/text-banner";
 
 const checklist = [
   "128 available credits for all images",
@@ -17,20 +18,11 @@ export const metadata: Metadata = {
 export default function PricingSectionSinglePage() {
   return (
     <div className="h-full md:max-w-screen-md lg:max-w-screen-lg mx-auto flex flex-col gap-y-16 justify-start py-12 px-4 md:py-16 lg:p-24">
-      <div className="flex flex-col items-center md:px-8 lg:px-40">
-        <div className="flex flex-col items-center gap-y-3 md:px-10">
-          <span className="text-base font-semibold text-indigo-700">
-            One-time purchase
-          </span>
-          <h1 className="text-center text-3xl font-semibold text-neutral-900 md:text-5xl">
-            Pay as you need
-          </h1>
-        </div>
-        <p className="mt-5 text-center text-xl text-neutral-600">
-          We offer one-time purchases with credits, for you to use as needed.
-          Always active.
-        </p>
-      </div>
+      <TextBanner
+        eyebrow="One-time purchase"
+        heading="Pay as you need"
+        subheading="We offer one-time purchases with credits, for you to use as needed. Always active."
+      />
       <div className="flex flex-col lg:flex-row gap-y-8 md:gap-y-12 lg:gap-x-8">
         <div className="flex flex-col gap-y-8 md:gap-y-16 lg:justify-center lg:w-3/5">
           <h2 className="text-2xl md:text-4xl font-semibold text-neutral-900">
