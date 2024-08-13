@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import FeatureCard from "../_components/feature-card";
+import FeatureCard from "../../_components/feature-card";
 import {
   RiDownload2Line,
   RiBrushLine,

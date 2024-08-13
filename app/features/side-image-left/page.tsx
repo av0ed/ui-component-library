@@ -1,26 +1,26 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import FeatureCard from "../_components/feature-card";
-import { RiHdLine, RiWaterPercentLine, RiRainbowLine } from "@remixicon/react";
+import FeatureCard from "../../_components/feature-card";
+import { RiRocket2Line, RiP2pLine, RiCopyrightLine } from "@remixicon/react";
 
 const features = [
   {
     id: 0,
-    icon: RiHdLine,
-    feature: "5K resolution support",
-    description: `All images boast a minimum resolution of 5K, ensuring crisp, crystal-clear quality.`,
+    icon: RiRocket2Line,
+    feature: "Faster downloads",
+    description: `Our robust servers are primed to deliver the highest resolution images swiftly, ensuring a smooth download experience`,
   },
   {
     id: 1,
-    icon: RiWaterPercentLine,
-    feature: "From water to glass",
-    description: `We offer a wide array of abstractions, ranging from water to glass, and encompassing various styles including 3D and vector.`,
+    icon: RiP2pLine,
+    feature: "Convenience for teams",
+    description: `Your single account can accommodate multiple users simultaneously downloading without any disruptions, streamlining teamwork and productivity.`,
   },
   {
     id: 2,
-    icon: RiRainbowLine,
-    feature: "Portrait or landscape",
-    description: `Effortlessly adapt your images for any platform - whether it's a stunning wallpaper or captivating Instagram reels and stories.`,
+    icon: RiCopyrightLine,
+    feature: "Royalty-free licensing",
+    description: `Our straightforward, royalty-free licensing means your chosen images are yours to innovate with, without the hassle of negotiating usage rights for every new project.`,
   },
 ];
 
@@ -33,17 +33,17 @@ export default function FeaturesSectionSideImagePage() {
     <div className="h-full mx-auto flex flex-col justify-start items-center max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg py-12 px-4 md:py-16 lg:py-24 lg:px-14">
       <div className="flex flex-col items-center md:px-10 lg:px-40">
         <span className="text-base font-semibold text-indigo-700">
-          High-quality images
+          Best-in-class support
         </span>
         <h1 className="text-center mt-3 text-3xl font-semibold text-neutral-900 md:text-5xl">
-          For designers, by designers
+          Convenience and licensing that empowers
         </h1>
         <p className="mt-5 text-center text-xl text-neutral-600">
-          Unleash boundless creativity with a large repository of images
-          optimized for designers
+          In a world where storytelling constantly evolves, don&apos;t let
+          licensing and poor support hold you down.
         </p>
       </div>
-      <div className="flex flex-col gap-y-12 mt-12 md:mt-16 lg:gap-y-0 lg:flex-row lg:w-full lg:gap-x-8">
+      <div className="flex flex-col-reverse gap-y-12 mt-12 md:mt-16 lg:gap-y-0 lg:flex-row-reverse lg:w-full lg:gap-x-8">
         <div className="flex flex-col items-start justify-center gap-y-10 lg:w-1/2">
           {features.map(({ id, icon, feature, description }) => (
             <FeatureCard
@@ -56,8 +56,8 @@ export default function FeaturesSectionSideImagePage() {
           ))}
         </div>
         <Image
-          src="/unsplash-md.png"
-          alt="colorful, clear cubes on a tile counter"
+          src="/unsplash-md-2.png"
+          alt="solid, colorful boxes"
           height={0}
           width={0}
           className="h-auto w-full rounded-lg shadow-lg lg:w-1/2"
