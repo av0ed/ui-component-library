@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import abstractlyLogo from "../../public/abstractly-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../_components/button";
@@ -8,7 +9,7 @@ import { RiCloseLine, RiMenuLine } from "@remixicon/react";
 
 const pages = [
   { id: 0, page: "Home", href: "/" },
-  { id: 1, page: "Features", href: "/features-section-grid" },
+  { id: 1, page: "Features", href: "/features/grid" },
   { id: 2, page: "Pricing", href: "/pricing-section-single" },
   { id: 3, page: "About Us", href: "/team-section" },
   { id: 4, page: "Contact", href: "/contact" },
@@ -27,8 +28,9 @@ export default function Navbar() {
   function NavMenu() {
     return (
       <nav
-        aria-label="mainmenulabel"
+        aria-label="Site navigation panel"
         className="flex flex-col lg:flex-row mx-auto px-4 pb-4 pt-8 md:px-8 lg:p-0 lg:m-0 max-w-screen-sm md:max-w-screen-md lg:max-w-full lg:grow"
+        role="navigation"
       >
         <ul className="flex flex-col grow lg:flex-row lg:items-center gap-y-2 lg:gap-x-8">
           {pages.map(({ id, page, href }) => (
@@ -46,13 +48,13 @@ export default function Navbar() {
           <Button
             classes="btn--xl btn--secondary md:w-1/2 lg:w-auto"
             text="Learn more"
-            href="/"
+            href="/features-section-side-image-right"
             onClick={handleClick}
           />
           <Button
             classes="btn--xl btn--primary md:w-1/2 lg:w-auto mt-4 md:mt-0 md:ml-4"
             text="Try it out"
-            href="/"
+            href="/pricing-section-single"
             onClick={handleClick}
           />
         </div>
@@ -62,11 +64,11 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 bg-white pt-4 w-full shadow-md">
-      <div className="h-[68px] mx-auto flex flex-row items-center px-4 md:px-8 lg:px-28 lg:gap-x-24 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg">
+      <div className="h-[68px] mx-auto flex flex-row items-center px-4 md:px-8 lg:px-28 lg:gap-x-24 max-w-screen-lg">
         <div className="flex flex-col">
           <Link className="flex flex-row items-center" href="/">
             <Image
-              src="/abstractly-logo.svg"
+              src={abstractlyLogo}
               height={32}
               width={32}
               alt="Abstractly logo"
@@ -80,22 +82,28 @@ export default function Navbar() {
           <IconButton
             Icon={RiCloseLine}
             onClick={handleClick}
+            ariaExpanded={!!showMenu ? true : false}
+            ariaLabel="Close site navigation panel"
             classes="ml-auto text-neutral-600 lg:hidden"
           />
         ) : (
           <IconButton
             Icon={RiMenuLine}
-            classes="ml-auto text-neutral-600 lg:hidden"
             onClick={handleClick}
+            ariaExpanded={!!showMenu ? true : false}
+            ariaLabel="Expand site navigation panel"
+            classes="ml-auto text-neutral-600 lg:hidden"
           />
         )}
         <div className="hidden lg:flex lg:grow">
           <NavMenu />
         </div>
       </div>
-      <div className="w-full absolute shadow-md bg-white left-0 lg:hidden">
-        {showMenu && <NavMenu />}
-      </div>
+      {showMenu && (
+        <div className="w-full absolute shadow-md bg-white left-0 lg:hidden">
+          <NavMenu />
+        </div>
+      )}
     </header>
   );
 }

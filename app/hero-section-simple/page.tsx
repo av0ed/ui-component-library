@@ -11,7 +11,7 @@ export default function HeroSectionPage() {
       imageAlt="Abstract, floating cubes"
       imageSrc={heroSimple}
       heading="Well-crafted abstract images"
-      subHeading="High-quality abstract images for your projects, wallpaper, and presentations."
+      subheading="High-quality abstract images for your projects, wallpaper, and presentations."
     />
   );
 }

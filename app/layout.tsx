@@ -20,11 +20,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // todo: the children wrapper will have h-full w-full bg-white
   return (
     <html lang="en" className="h-full">
-      <body className={`${notoSans.className} flex flex-col h-full bg-white`}>
+      <body className={`${notoSans.className} flex flex-col h-full`}>
         <Navbar />
-        <main className="flex flex-col flex-nowrap flex-1">{children}</main>
+        <main
+          role="main"
+          className="flex flex-col flex-nowrap flex-1 p-4 bg-gradient-haze"
+        >
+          <div className="h-full w-full bg-white">{children}</div>
+        </main>
         <Footer />
       </body>
     </html>

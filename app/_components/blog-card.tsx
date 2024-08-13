@@ -17,10 +17,10 @@ export default function BlogCard({
   subHeadline,
 }: BlogCardProps) {
   return (
-    <article className="flex flex-col border-l border-r border-b border-neutral-200 shadow shadow-neutral-200 bg-white rounded-lg w-[340px]">
+    <article className="flex flex-col border border-neutral-200 shadow shadow-neutral-200 bg-white rounded-lg w-[340px]">
       <Image
         alt={imageAlt}
-        className="rounded-t-lg object-cover"
+        className="rounded-t-lg"
         height={0}
         src={imageSrc}
         style={{ objectFit: "cover" }}
