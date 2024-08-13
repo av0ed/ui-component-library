@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function FeaturesSectionSideImagePage() {
   return (
-    <div className="h-full mx-auto flex flex-col justify-start items-center max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg py-12 px-4 md:py-16 lg:py-24 lg:px-14">
+    <div>
       <div className="flex flex-col items-center md:px-10 lg:px-40">
         <span className="text-base font-semibold text-indigo-700">
           High-quality images
