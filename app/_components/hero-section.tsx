@@ -18,7 +18,7 @@ export default function HeroSection({
   subHeading,
 }: HeroSectionProps) {
   return (
-    <div className="h-full flex flex-col rounded justify-center items-center bg-white">
+    <div className="h-full flex flex-col rounded justify-center items-center">
       <div className="flex flex-col lg:flex-row gap-y-12 md:gap-y-8 lg:gap-x-8 py-12 md:py-16 px-4 lg:p-24 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg">
         <div className="flex flex-col lg:justify-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-neutral-900">

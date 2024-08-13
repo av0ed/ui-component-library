@@ -42,7 +42,7 @@ export default function PricingSectionSinglePage() {
             ))}
           </div>
         </div>
-        <div className="max-w-screen-md lg:w-2/5 flex flex-col gap-y-8 p-8 shadow-lg border border-neutral-200 rounded-lg">
+        <div className="bg-white max-w-screen-md lg:w-2/5 flex flex-col gap-y-8 p-8 shadow-lg border border-neutral-200 rounded-lg">
           <div className="flex flex-col gap-y-2 items-center">
             <Badge classes="badge--md badge--success" text="Popular" />
             <span className="text-neutral-900 text-5xl font-semibold md:text-6xl md:font-bold">
