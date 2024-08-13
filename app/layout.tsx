@@ -24,7 +24,9 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body className={`${notoSans.className} flex flex-col h-full bg-white`}>
         <Navbar />
-        <main className="flex flex-col flex-nowrap flex-1">{children}</main>
+        <main role="main" className="flex flex-col flex-nowrap flex-1">
+          <div className="h-full p-4 bg-gradient-haze">{children}</div>
+        </main>
         <Footer />
       </body>
     </html>

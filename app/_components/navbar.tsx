@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import abstractlyLogo from "../../public/abstractly-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../_components/button";
@@ -67,7 +68,7 @@ export default function Navbar() {
         <div className="flex flex-col">
           <Link className="flex flex-row items-center" href="/">
             <Image
-              src="/abstractly-logo.svg"
+              src={abstractlyLogo}
               height={32}
               width={32}
               alt="Abstractly logo"

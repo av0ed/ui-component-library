@@ -30,41 +30,39 @@ export const metadata: Metadata = {
 
 export default function FeaturesSectionSideImagePage() {
   return (
-    <div className="h-full p-4 bg-gradient-haze">
-      <div className="w-full h-full bg-white">
-        <div className="h-full mx-auto flex flex-col justify-start items-center max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg py-12 px-4 md:py-16 lg:py-24 lg:px-14">
-          <div className="flex flex-col items-center md:px-10 lg:px-40">
-            <span className="text-base font-semibold text-indigo-700">
-              Best-in-class support
-            </span>
-            <h1 className="text-center mt-3 text-3xl font-semibold text-neutral-900 md:text-5xl">
-              Convenience and licensing that empowers
-            </h1>
-            <p className="mt-5 text-center text-xl text-neutral-600">
-              In a world where storytelling constantly evolves, don&apos;t let
-              licensing and poor support hold you down.
-            </p>
+    <div className="w-full h-full bg-white">
+      <div className="h-full mx-auto flex flex-col justify-start items-center max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg py-12 px-4 md:py-16 lg:py-24 lg:px-14">
+        <div className="flex flex-col items-center md:px-10 lg:px-40">
+          <span className="text-base font-semibold text-indigo-700">
+            Best-in-class support
+          </span>
+          <h1 className="text-center mt-3 text-3xl font-semibold text-neutral-900 md:text-5xl">
+            Convenience and licensing that empowers
+          </h1>
+          <p className="mt-5 text-center text-xl text-neutral-600">
+            In a world where storytelling constantly evolves, don&apos;t let
+            licensing and poor support hold you down.
+          </p>
+        </div>
+        <div className="flex flex-col-reverse gap-y-12 mt-12 md:mt-16 lg:gap-y-0 lg:flex-row-reverse lg:w-full lg:gap-x-8">
+          <div className="flex flex-col items-start justify-center gap-y-10 lg:w-1/2">
+            {features.map(({ id, icon, feature, description }) => (
+              <FeatureCard
+                key={id}
+                Icon={icon}
+                iconAlign="row"
+                feature={feature}
+                description={description}
+              />
+            ))}
           </div>
-          <div className="flex flex-col-reverse gap-y-12 mt-12 md:mt-16 lg:gap-y-0 lg:flex-row-reverse lg:w-full lg:gap-x-8">
-            <div className="flex flex-col items-start justify-center gap-y-10 lg:w-1/2">
-              {features.map(({ id, icon, feature, description }) => (
-                <FeatureCard
-                  key={id}
-                  Icon={icon}
-                  iconAlign="row"
-                  feature={feature}
-                  description={description}
-                />
-              ))}
-            </div>
-            <Image
-              src="/unsplash-md-2.png"
-              alt="solid, colorful boxes"
-              height={0}
-              width={0}
-              className="h-auto w-full rounded-lg shadow-lg lg:w-1/2"
-            />
-          </div>
+          <Image
+            src="/unsplash-md-2.png"
+            alt="solid, colorful boxes"
+            height={0}
+            width={0}
+            className="h-auto w-full rounded-lg shadow-lg lg:w-1/2"
+          />
         </div>
       </div>
     </div>
