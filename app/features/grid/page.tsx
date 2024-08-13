@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import FeatureCard from "../../_components/feature-card";
-import TextBanner from "../../_components/text-banner";
 import {
   RiDownload2Line,
   RiBrushLine,
@@ -9,6 +7,8 @@ import {
   RiTeamLine,
   RiRefreshLine,
 } from "@remixicon/react";
+import FeatureCard from "../../_components/feature-card";
+import TextBanner from "../../_components/text-banner";
 
 const features = [
   {
@@ -55,12 +55,12 @@ paintings or prints on paper).`,
 ];
 
 export const metadata: Metadata = {
-  title: "Features  | UI Component Library | Jason Long",
+  title: "Features Grid | UI Component Library | Jason Long",
 };
 
-export default function FeaturesSectionGridPage() {
+export default function FeaturesGridPage() {
   return (
-    <div>
+    <>
       <TextBanner
         eyebrow="Premium abstract images"
         heading="Easy access to top quality images"
@@ -77,6 +77,6 @@ export default function FeaturesSectionGridPage() {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }

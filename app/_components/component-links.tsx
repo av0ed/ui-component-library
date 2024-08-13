@@ -3,14 +3,13 @@ import { makeLink } from "../_utilities/helpers";
 
 export function ComponentLinks() {
   const pages = [
-    "404 Section",
     "Badge",
     "Button",
     "Blog Card",
     "Hero Section Simple",
     "Icon Button",
     "Profile Card",
-    "Team Section",
+    "Team",
     "Testimonial Card",
     "Text Area",
     "Text Input",

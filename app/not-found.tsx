@@ -4,7 +4,7 @@ import abstractBackground from "../public/abstract-background.jpg";
 
 export default function NotFound() {
   return (
-    <section className="h-full flex flex-col justify-center">
+    <section className="h-full w-full flex flex-col justify-center">
       <Image
         alt="An abstract, flowing background"
         className="fixed overflow-hidden -z-10"
@@ -15,7 +15,7 @@ export default function NotFound() {
           objectFit: "cover",
         }}
       />
-      <div className="flex flex-col py-12 md:py-16 px-3 md:px-4 lg:p-24">
+      <div className="flex flex-col">
         <span className="font-semibold text-indigo-700">Not found</span>
         <h1 className="mt-2 md:mt-3 text-4xl md:text-5xl lg:text-6xl font-semibold text-neutral-900">
           We can&apos;t find the page

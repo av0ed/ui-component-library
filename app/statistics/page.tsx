@@ -1,5 +1,6 @@
-import Image from "next/image";
 import type { Metadata } from "next";
+import Image from "next/image";
+import TextBanner from "../_components/text-banner";
 
 const statistics = [
   {
@@ -25,19 +26,12 @@ export const metadata: Metadata = {
 
 export default function StatisticsPage() {
   return (
-    <div className="h-full mx-auto flex flex-col justify-start items-center py-12 px-4 md:py-16 lg:p-24 gap-y-12 md:gap-y-16 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg ">
-      <div className="flex flex-col items-center lg:px-8">
-        <span className="text-base font-semibold text-indigo-700">
-          Statistics
-        </span>
-        <h1 className="text-center mt-3 text-3xl font-semibold text-neutral-900 md:text-5xl">
-          More than premium abstract imagery
-        </h1>
-        <p className="mt-5 text-center text-xl text-neutral-600">
-          Our platform is more than just as a service to us – it is a catalyst
-          for enriching lives through premium abstract imagery.
-        </p>
-      </div>
+    <div className="h-full flex flex-col justify-start items-center gap-y-12 md:gap-y-16">
+      <TextBanner
+        eyebrow="Statistics"
+        heading="More than premium abstract imagery"
+        subheading="Our platform is more than just as a service to us – it is a catalyst for enriching lives through premium abstract imagery."
+      />
       <div className="flex flex-col self-stretch lg:flex-row lg:gap-x-8 gap-y-12 md:gap-y-16">
         <Image
           alt="milk-white, floating cubes"
