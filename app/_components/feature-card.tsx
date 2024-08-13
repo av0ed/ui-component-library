@@ -30,7 +30,7 @@ export default function FeatureCard({
     <li
       className={`flex w-full gap-5 max-w-screen-sm md:max-w-screen-md ${classes[iconAlign].container}`}
     >
-      <div className="flex bg-white items-center justify-center h-12 w-12 rounded-full shadow shrink-0">
+      <div className="flex border border-neutral-200 bg-white items-center justify-center h-12 w-12 rounded-full shadow shrink-0">
         {Icon && <Icon className="text-indigo-700 h-6 w-6" />}
       </div>
       <div

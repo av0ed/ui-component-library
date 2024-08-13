@@ -29,7 +29,7 @@ export default function RootLayout({
           role="main"
           className="flex flex-col flex-nowrap flex-1 p-4 bg-gradient-haze"
         >
-          <div className="">{children}</div>
+          <div className="h-full w-full bg-white">{children}</div>
         </main>
         <Footer />
       </body>
