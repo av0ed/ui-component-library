@@ -59,31 +59,29 @@ export const metadata: Metadata = {
 
 export default function FeaturesSectionGridPage() {
   return (
-    <div className="w-full h-full bg-white">
-      <div className="h-full mx-auto flex flex-col justify-start items-center max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg py-12 px-4 md:py-16 lg:py-24 lg:px-14">
-        <div className="flex flex-col items-center md:px-10 lg:px-40">
-          <span className="text-base font-semibold text-indigo-700">
-            Premium abstract images
-          </span>
-          <h1 className="text-center mt-3 text-3xl font-semibold text-neutral-900 md:text-5xl">
-            Easy access to top quality images
-          </h1>
-          <p className="mt-5 text-center text-xl text-neutral-600">
-            In a world where storytelling constantly evolves, we lead with
-            groundbreaking images designed for your presentation excellence.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 items-start justify-center gap-y-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3 mt-12 md:mt-16 lg:gap-y-12 lg:gap-x-8">
-          {features.map(({ id, icon, feature, description }) => (
-            <FeatureCard
-              key={id}
-              Icon={icon}
-              iconAlign="col"
-              feature={feature}
-              description={description}
-            />
-          ))}
-        </div>
+    <div className="h-full mx-auto flex flex-col justify-start items-center max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg py-12 px-4 md:py-16 lg:py-24 lg:px-14">
+      <div className="flex flex-col items-center md:px-10 lg:px-40">
+        <span className="text-base font-semibold text-indigo-700">
+          Premium abstract images
+        </span>
+        <h1 className="text-center mt-3 text-3xl font-semibold text-neutral-900 md:text-5xl">
+          Easy access to top quality images
+        </h1>
+        <p className="mt-5 text-center text-xl text-neutral-600">
+          In a world where storytelling constantly evolves, we lead with
+          groundbreaking images designed for your presentation excellence.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 items-start justify-center gap-y-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3 mt-12 md:mt-16 lg:gap-y-12 lg:gap-x-8">
+        {features.map(({ id, icon, feature, description }) => (
+          <FeatureCard
+            key={id}
+            Icon={icon}
+            iconAlign="col"
+            feature={feature}
+            description={description}
+          />
+        ))}
       </div>
     </div>
   );
