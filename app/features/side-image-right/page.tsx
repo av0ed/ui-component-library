@@ -1,8 +1,8 @@
-import Image from "next/image";
 import type { Metadata } from "next";
+import { RiHdLine, RiWaterPercentLine, RiRainbowLine } from "@remixicon/react";
+import Image from "next/image";
 import FeatureCard from "../../_components/feature-card";
 import TextBanner from "../../_components/text-banner";
-import { RiHdLine, RiWaterPercentLine, RiRainbowLine } from "@remixicon/react";
 
 const features = [
   {
@@ -26,12 +26,12 @@ const features = [
 ];
 
 export const metadata: Metadata = {
-  title: "Features  | UI Component Library | Jason Long",
+  title: "Features Side Image Right | UI Component Library | Jason Long",
 };
 
-export default function FeaturesSectionSideImagePage() {
+export default function FeaturesSideImageRightPage() {
   return (
-    <div>
+    <>
       <TextBanner
         eyebrow="High-quality images"
         heading="For designers, by designers"
@@ -57,6 +57,6 @@ export default function FeaturesSectionSideImagePage() {
           className="h-auto w-full rounded-lg shadow-lg lg:w-1/2"
         />
       </div>
-    </div>
+    </>
   );
 }

@@ -12,12 +12,12 @@ const checklist = [
 ];
 
 export const metadata: Metadata = {
-  title: "Pricing Section (Single)  | UI Component Library | Jason Long",
+  title: "Pricing (Single)  | UI Component Library | Jason Long",
 };
 
-export default function PricingSectionSinglePage() {
+export default function PricingSinglePage() {
   return (
-    <div className="h-full md:max-w-screen-md lg:max-w-screen-lg mx-auto flex flex-col gap-y-16 justify-start py-12 px-4 md:py-16 lg:p-24">
+    <div className="h-full flex flex-col gap-y-16 justify-start py-12 px-4 md:py-16 lg:p-24">
       <TextBanner
         eyebrow="One-time purchase"
         heading="Pay as you need"
