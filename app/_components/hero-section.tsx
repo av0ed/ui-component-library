@@ -18,7 +18,7 @@ export default function HeroSection({
   subheading,
 }: HeroSectionProps) {
   return (
-    <div className="flex flex-col lg:flex-row gap-y-12 md:gap-y-8 lg:gap-x-8 py-12 md:py-16 px-4 lg:p-24">
+    <div className="flex flex-col lg:flex-row gap-y-12 md:gap-y-8 lg:gap-x-8">
       <div className="flex flex-col lg:justify-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-neutral-900">
           {heading}

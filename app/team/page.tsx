@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 export default function TeamPage() {
   return (
-    <div className="h-full flex flex-col justify-start items-center py-12 px-4 md:py-16 lg:py-24 lg:px-14">
+    <div className="h-full flex flex-col justify-start items-center">
       <TextBanner
         eyebrow="Team"
         heading="Meet our team"
@@ -20,7 +20,7 @@ export default function TeamPage() {
       <div
         className="grid grid-cols-1 items-start justify-center
         gap-y-12 md:grid-cols-2 md:gap-y-16 md:gap-x-8 lg:grid-cols-4 mt-12
-        md:mt-16 lg:px-8"
+        md:mt-16"
       >
         <TeamCard
           imageSrc={joe}

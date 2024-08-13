@@ -29,7 +29,7 @@ export default function RootLayout({
           className="flex flex-col flex-nowrap flex-1 p-4 bg-gradient-haze"
         >
           <div className="h-full w-full bg-white">
-            <div className="mx-auto max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg">
+            <div className="flex flex-col flex-nowrap justify-start items-center mx-auto py-12 px-4 md:py-16 lg:p-24 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg">
               {children}
             </div>
           </div>

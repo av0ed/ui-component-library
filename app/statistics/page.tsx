@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function StatisticsPage() {
   return (
-    <div className="h-full flex flex-col justify-start items-center py-12 px-4 md:py-16 lg:p-24 gap-y-12 md:gap-y-16">
+    <div className="h-full flex flex-col justify-start items-center gap-y-12 md:gap-y-16">
       <TextBanner
         eyebrow="Statistics"
         heading="More than premium abstract imagery"
