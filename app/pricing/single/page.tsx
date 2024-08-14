@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Badge from "../_components/badge";
-import Button from "../_components/button";
-import ChecklistItem from "../_components/checklist-item";
-import TextBanner from "../_components/text-banner";
+import Badge from "../../_components/badge";
+import Button from "../../_components/button";
+import ChecklistItem from "../../_components/checklist-item";
+import TextBanner from "../../_components/text-banner";
 
 const checklist = [
   "128 available credits for all images",
@@ -12,10 +12,10 @@ const checklist = [
 ];
 
 export const metadata: Metadata = {
-  title: "Pricing (Single)  | UI Component Library | Jason Long",
+  title: "Pricing | UI Component Library | Jason Long",
 };
 
-export default function PricingSinglePage() {
+export default function PricingPage() {
   return (
     <div className="h-full flex flex-col gap-y-16 justify-start">
       <TextBanner
