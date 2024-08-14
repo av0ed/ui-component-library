@@ -10,7 +10,7 @@ import {
 const pages = [
   { id: 0, page: "Home", href: "/" },
   { id: 1, page: "Features", href: "/features/grid" },
-  { id: 2, page: "Pricing", href: "/pricing-single" },
+  { id: 2, page: "Pricing", href: "/pricing/tiers" },
   { id: 3, page: "About Us", href: "team" },
   { id: 4, page: "Contact", href: "/contact" },
 ];

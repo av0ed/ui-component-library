@@ -10,7 +10,7 @@ import { RiCloseLine, RiMenuLine } from "@remixicon/react";
 const pages = [
   { id: 0, page: "Home", href: "/" },
   { id: 1, page: "Features", href: "/features/grid" },
-  { id: 2, page: "Pricing", href: "/pricing-single" },
+  { id: 2, page: "Pricing", href: "/pricing/tiers" },
   { id: 3, page: "About Us", href: "/team" },
   { id: 4, page: "Contact", href: "/contact" },
 ];
@@ -54,7 +54,7 @@ export default function Navbar() {
           <Button
             classes="btn--xl btn--primary md:w-1/2 lg:w-auto mt-4 md:mt-0 md:ml-4"
             text="Try it out"
-            href="/pricing-single"
+            href="/pricing/tiers"
             onClick={handleClick}
           />
         </div>
