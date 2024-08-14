@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+import { useState } from "react";
 import Button from "../../_components/button";
 import PricingCard from "../../_components/pricing-card";
 import TextBanner from "../../_components/text-banner";
@@ -43,11 +44,17 @@ const pricingPlans: PricingCardProps[] = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Pricing Tiers  | UI Component Library | Jason Long",
-};
-
 export default function PricingTiersPage() {
+  const [paymentSchedule, setPaymentSchedule] = useState("Annually");
+
+  const handleClick = (
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+  ) => {
+    const currTarget = event.currentTarget;
+    const value = currTarget.textContent;
+    if (value) setPaymentSchedule(value);
+  };
+
   return (
     <div className="h-full flex flex-col">
       <TextBanner
@@ -56,8 +63,16 @@ export default function PricingTiersPage() {
         subheading="Pick the plan that suits you today and step up as your demands grow - our flexible options have your journey mapped out."
       />
       <div className="flex flex-row justify-center gap-x-4 mt-10">
-        <Button classes="btn--lg btn--secondary" text="Monthly" />
-        <Button classes="btn--lg btn--secondary" text="Annually" />
+        <Button
+          classes={`btn--xl ${paymentSchedule === "Monthly" ? "btn--secondary" : ""}`}
+          text="Monthly"
+          onClick={handleClick}
+        />
+        <Button
+          classes={`btn--xl ${paymentSchedule === "Annually" ? "btn--secondary" : ""}`}
+          text="Annually"
+          onClick={handleClick}
+        />
       </div>
       <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-x-8 mt-12">
         {pricingPlans.map((plan, idx) => (

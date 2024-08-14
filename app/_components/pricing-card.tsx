@@ -24,7 +24,7 @@ export default function PricingCard({
   };
   return (
     <div
-      className={`flex flex-col gap-y-8 w-full bg-white shadow-sm border rounded-lg ${highlighted ? "border-indigo-600" : "border-neutral-200 "}`}
+      className={`flex flex-col gap-y-8 w-full bg-white border rounded-lg ${highlighted ? "border-indigo-600 shadow-2xl" : "border-neutral-200"}`}
     >
       {highlighted && (
         <div className="flex flex-col items-center justify-center bg-indigo-50 p-4 rounded-tl-lg rounded-tr-lg">
