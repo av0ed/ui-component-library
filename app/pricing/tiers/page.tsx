@@ -46,7 +46,7 @@ export default function PricingTiersPage() {
     {
       planType: "Basic Plan",
       planBlurb: "Access to a curated selection of abstract images",
-      planPrice: getPlanPrice("basic"),
+      planPrice: 6.99,
       planPriceBlurb: getPlanPriceBlurb(6.99),
       checklistItems: [
         "Standard quality images",
