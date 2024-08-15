@@ -1,4 +1,6 @@
-import { RiIndeterminateCircleLine } from "@remixicon/react";
+import { RiAddCircleLine, RiIndeterminateCircleLine } from "@remixicon/react";
+import Button from "../_components/button";
+import TextBanner from "../_components/text-banner";
 
 const faqs = [
   {
@@ -46,20 +48,51 @@ platform.`,
 
 export default function FaqPage() {
   return (
-    <>
-      <div>
+    <div className="flex flex-col">
+      <TextBanner
+        heading="Frequently asked questions"
+        subheading="Get all your questions answered"
+      />
+      <div className="mt-12 md:mt-16">
         {faqs.map(({ question, answer }, idx) => (
-          <div key={idx} className="flex flex-row gap-x-4">
-            <div className="flex flex-col gap-y-2">
-              <p className="text-lg font-medium text-neutral-900">{question}</p>
-              <p className="text-neutral-600">{answer}</p>
+          <div key={idx} className="flex flex-col">
+            <div className="flex flex-row gap-x-4">
+              <div className="flex flex-col gap-y-2">
+                <p className="text-lg font-medium text-neutral-900">
+                  {question}
+                </p>
+                <p className="text-neutral-600">{answer}</p>
+              </div>
+              <div className="flex">
+                <RiIndeterminateCircleLine className="self-start h-6 w-6 text-neutral-400" />
+                <RiAddCircleLine className="self-start h-6 w-6 text-neutral-400" />
+              </div>
             </div>
-            <div className="flex">
-              <RiIndeterminateCircleLine className="self-start h-6 w-6 text-neutral-400" />
-            </div>
+            {idx !== faqs.length - 1 && (
+              <div className="border border-neutral-300 my-7"></div>
+            )}
           </div>
         ))}
       </div>
-    </>
+      <div className="flex flex-col gap-y-4 md:flex-row md:gap-x-4 self-stretch mt-7 p-4 md:p-8 border border-neutral-200 rounded-lg shadow-md">
+        <div className="flex flex-col flex-grow gap-y-2">
+          <p className="text-xl font-semibold text-neutral-900">
+            Can’t find the answer you’re looking for?
+          </p>
+          <p className="text-neutral-600">
+            Reach out to our{" "}
+            <a href="/contact-us" className="text-indigo-700">
+              customer support
+            </a>{" "}
+            team.
+          </p>
+        </div>
+        <Button
+          classes="btn--xl btn--primary"
+          text="Get in touch"
+          href="/contact-us"
+        />
+      </div>
+    </div>
   );
 }
