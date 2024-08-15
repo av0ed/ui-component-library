@@ -18,11 +18,11 @@ const pages = [
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
-  const handleClick = (
-    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
-  ) => {
-    event.preventDefault;
-    setShowMenu(!showMenu);
+  const openMenu = () => {
+    setShowMenu(true);
+  };
+  const closeMenu = () => {
+    setShowMenu(false);
   };
 
   function NavMenu() {
@@ -39,7 +39,7 @@ export default function Navbar() {
                 classes="link--xl link--secondary"
                 href={href}
                 text={page}
-                onClick={handleClick}
+                onClick={closeMenu}
               />
             </li>
           ))}
@@ -49,13 +49,13 @@ export default function Navbar() {
             classes="btn--xl btn--secondary md:w-1/2 lg:w-auto"
             text="Learn more"
             href="/features/side-image-right"
-            onClick={handleClick}
+            onClick={closeMenu}
           />
           <Button
             classes="btn--xl btn--primary md:w-1/2 lg:w-auto mt-4 md:mt-0 md:ml-4"
             text="Try it out"
             href="/pricing/tiers"
-            onClick={handleClick}
+            onClick={closeMenu}
           />
         </div>
       </nav>
@@ -81,7 +81,7 @@ export default function Navbar() {
         {showMenu ? (
           <IconButton
             Icon={RiCloseLine}
-            onClick={handleClick}
+            onClick={closeMenu}
             ariaExpanded={!!showMenu ? true : false}
             ariaLabel="Close site navigation panel"
             classes="ml-auto text-neutral-600 lg:hidden"
@@ -89,7 +89,7 @@ export default function Navbar() {
         ) : (
           <IconButton
             Icon={RiMenuLine}
-            onClick={handleClick}
+            onClick={openMenu}
             ariaExpanded={!!showMenu ? true : false}
             ariaLabel="Expand site navigation panel"
             classes="ml-auto text-neutral-600 lg:hidden"
@@ -99,11 +99,11 @@ export default function Navbar() {
           <NavMenu />
         </div>
       </div>
-      {showMenu && (
-        <div className="w-full absolute shadow-md bg-white left-0 lg:hidden">
-          <NavMenu />
-        </div>
-      )}
+      <div
+        className={`w-full absolute shadow-md bg-white left-0 overflow-hidden transition-max-height duration-150 ease-in-out ${showMenu ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}
+      >
+        <NavMenu />
+      </div>
     </header>
   );
 }
