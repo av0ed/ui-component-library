@@ -13,6 +13,7 @@ const pages = [
   { id: 2, page: "Pricing", href: "/pricing/tiers" },
   { id: 3, page: "About Us", href: "team" },
   { id: 4, page: "Contact", href: "/contact" },
+  { id: 5, page: "FAQ", href: "/faq" },
 ];
 
 const socialLinks = [
