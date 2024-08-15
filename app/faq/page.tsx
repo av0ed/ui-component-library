@@ -1,5 +1,6 @@
-import { RiAddCircleLine, RiIndeterminateCircleLine } from "@remixicon/react";
+"use client";
 import Button from "../_components/button";
+import FaqItem from "../_components/faq-item";
 import TextBanner from "../_components/text-banner";
 
 const faqs = [
@@ -51,23 +52,12 @@ export default function FaqPage() {
     <div className="flex flex-col">
       <TextBanner
         heading="Frequently asked questions"
-        subheading="Get all your questions answered"
+        subheading="Get all your questions answered."
       />
       <div className="mt-12 md:mt-16">
         {faqs.map(({ question, answer }, idx) => (
           <div key={idx} className="flex flex-col">
-            <div className="flex flex-row gap-x-4">
-              <div className="flex flex-col gap-y-2">
-                <p className="text-lg font-medium text-neutral-900">
-                  {question}
-                </p>
-                <p className="text-neutral-600">{answer}</p>
-              </div>
-              <div className="flex">
-                <RiIndeterminateCircleLine className="self-start h-6 w-6 text-neutral-400" />
-                <RiAddCircleLine className="self-start h-6 w-6 text-neutral-400" />
-              </div>
-            </div>
+            <FaqItem question={question} answer={answer} />
             {idx !== faqs.length - 1 && (
               <div className="border border-neutral-300 my-7"></div>
             )}
@@ -79,13 +69,15 @@ export default function FaqPage() {
           <p className="text-xl font-semibold text-neutral-900">
             Can’t find the answer you’re looking for?
           </p>
-          <p className="text-neutral-600">
-            Reach out to our{" "}
-            <a href="/contact-us" className="text-indigo-700">
-              customer support
-            </a>{" "}
-            team.
-          </p>
+          <div className="inline-flex">
+            <span className="text-neutral-600">Reach out to our&nbsp;</span>
+            <Button
+              href="/contact-us"
+              classes="link--lg link--primary"
+              text="customer support"
+            />
+            <span className="text-neutral-600">&nbsp;team.</span>
+          </div>
         </div>
         <Button
           classes="btn--xl btn--primary"
