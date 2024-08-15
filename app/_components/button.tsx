@@ -6,14 +6,14 @@ type IconAlign = "left" | "right" | "surround";
 interface ButtonProps {
   Icon?: RemixiconComponentType;
   onClick?: (
-    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+    event?: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
   ) => void;
   ariaLabel?: string;
   classes: string;
   href?: string;
   iconAlign?: IconAlign;
   isDisabled?: boolean;
-  text?: string;
+  text: string;
 }
 
 export default function Button({
@@ -39,9 +39,9 @@ export default function Button({
 
   const renderContent = () => {
     return (
-      <div className={`${text ? "content-spacer" : ""}`}>
+      <div className="content-spacer">
         {renderLeftIcon()}
-        {text && <span>{text}</span>}
+        <span>{text}</span>
         {renderRightIcon()}
       </div>
     );

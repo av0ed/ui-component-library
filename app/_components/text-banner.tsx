@@ -1,7 +1,7 @@
 interface TextBannerProps {
-  eyebrow: string;
+  eyebrow?: string;
   heading: string;
-  subheading: string;
+  subheading?: string;
 }
 
 export default function TextBanner({
@@ -10,12 +10,18 @@ export default function TextBanner({
   subheading,
 }: TextBannerProps) {
   return (
-    <div className="flex flex-col items-center md:px-10 lg:px-40">
-      <span className="text-base font-semibold text-indigo-700">{eyebrow}</span>
-      <h1 className="text-center mt-3 text-3xl font-semibold text-neutral-900 md:text-5xl">
-        {heading}
-      </h1>
-      <p className="mt-5 text-center text-xl text-neutral-600">{subheading}</p>
+    <div className="flex flex-col items-center gap-y-5 md:px-10 lg:px-40">
+      <div className="flex flex-col items-center gap-y-3 md:px-10">
+        <span className="text-base font-semibold text-indigo-700">
+          {eyebrow}
+        </span>
+        <h1 className="text-center text-3xl md:text-5xl font-semibold text-neutral-900">
+          {heading}
+        </h1>
+      </div>
+      <p className="text-center text-lg md:text-xl text-neutral-600">
+        {subheading}
+      </p>
     </div>
   );
 }

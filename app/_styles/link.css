@@ -1,6 +1,6 @@
 @layer components {
   .__link--base {
-    @apply flex flex-nowrap shrink-0 gap-x-1 text-sm font-medium focus:outline-none focus:ring focus:ring-indigo-200;
+    @apply flex flex-nowrap rounded shrink-0 gap-x-1 text-sm font-medium focus:outline-none focus:ring focus:ring-indigo-200;
     svg {
       @apply h-5 w-5 p-0.375;
     }
