@@ -52,7 +52,7 @@ export default function FaqPage() {
     <div className="flex flex-col">
       <TextBanner
         heading="Frequently asked questions"
-        subheading="Get all your questions answered."
+        subheading="Get all your questions answered"
       />
       <div className="mt-12 md:mt-16">
         {faqs.map(({ question, answer }, idx) => (
@@ -69,15 +69,9 @@ export default function FaqPage() {
           <p className="text-xl font-semibold text-neutral-900">
             Can’t find the answer you’re looking for?
           </p>
-          <div className="inline-flex">
-            <span className="text-neutral-600">Reach out to our&nbsp;</span>
-            <Button
-              href="/contact-us"
-              classes="link--lg link--primary"
-              text="customer support"
-            />
-            <span className="text-neutral-600">&nbsp;team.</span>
-          </div>
+          <p className="text-neutral-600">
+            Reach out to our customer support team.
+          </p>
         </div>
         <Button
           classes="btn--xl btn--primary"
