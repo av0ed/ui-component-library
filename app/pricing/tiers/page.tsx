@@ -30,17 +30,17 @@ export default function PricingTiersPage() {
     }
   };
 
-  const planPrices = {
-    monthly: { basic: 9.99, standard: 19.99, premium: 29.99 },
-    annually: { basic: 6.99, standard: 15.99, premium: 25.99 },
-  };
+  // const planPrices = {
+  //   monthly: { basic: 9.99, standard: 19.99, premium: 29.99 },
+  //   annually: { basic: 6.99, standard: 15.99, premium: 25.99 },
+  // };
 
-  const getPlanPrice = (planType: string): number => {
-    if (paymentSchedule === "Monthly") {
-      return planPrices.monthly[planType];
-    }
-    return 0;
-  };
+  // const getPlanPrice = (planType: string): number => {
+  //   if (paymentSchedule === "Monthly") {
+  //     return planPrices.monthly[planType];
+  //   }
+  //   return 0;
+  // };
 
   const pricingPlans: PricingCardProps[] = [
     {
@@ -95,12 +95,10 @@ export default function PricingTiersPage() {
         <Button
           classes={`btn--lg w-[140px] ${paymentSchedule === "Monthly" ? "btn--secondary" : ""}`}
           text="Monthly"
-          onClick={handleClick}
         />
         <Button
           classes={`btn--lg w-[140px] ${paymentSchedule === "Annually" ? "btn--secondary" : ""}`}
           text="Annually"
-          onClick={handleClick}
         />
       </div>
       <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-x-8 mt-12">

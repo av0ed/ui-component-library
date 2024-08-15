@@ -53,9 +53,10 @@ export default function PricingCard({
         <span className="text-neutral-600">{planPriceBlurb}</span>
       </div>
       <div className="flex flex-col flex-grow gap-y-5 px-4 md:px-8">
-        {checklistItems.map((text, idx) => (
-          <ChecklistItem key={idx} text={text} />
-        ))}
+        {checklistItems &&
+          checklistItems.map((text, idx) => (
+            <ChecklistItem key={idx} text={text} />
+          ))}
       </div>
       <div className="flex px-4 pb-4 md:px-8 md:pb-8">
         <Button
