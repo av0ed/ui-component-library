@@ -6,9 +6,10 @@ export type PlanType = "Basic Plan" | "Standard Plan" | "Premium Plan";
 export interface PricingCardProps {
   highlighted?: boolean;
   planType: PlanType;
-  planBlurb: string;
+  planBlurb?: string;
   planPrice: number;
-  checklistItems: string[];
+  planPriceBlurb?: string;
+  checklistItems?: string[];
 }
 
 export default function PricingCard({
@@ -16,12 +17,9 @@ export default function PricingCard({
   planType,
   planBlurb,
   planPrice,
+  planPriceBlurb,
   checklistItems,
 }: PricingCardProps) {
-  const calculateAnnualPrice = () => {
-    const MONTHS_PER_YEAR = 12;
-    return Math.ceil(planPrice) * MONTHS_PER_YEAR;
-  };
   return (
     <div
       className={`flex flex-col gap-y-8 w-full bg-white border rounded-lg ${highlighted ? "border-indigo-600 shadow-2xl" : "border-neutral-200"}`}
@@ -52,7 +50,7 @@ export default function PricingCard({
             / month
           </span>
         </div>
-        <span className="text-neutral-600">{`Billed annually ($${calculateAnnualPrice()})`}</span>
+        <span className="text-neutral-600">{planPriceBlurb}</span>
       </div>
       <div className="flex flex-col flex-grow gap-y-5 px-4 md:px-8">
         {checklistItems.map((text, idx) => (
