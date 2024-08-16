@@ -37,7 +37,7 @@ export default function FaqItem({ question, answer }: FaqItemProps) {
           aria-controls={ANSWER_ID}
           aria-expanded={showAnswer}
           aria-label={showAnswer ? "Hide FAQ answer" : "Show FAQ answer"}
-          className="self-start"
+          className="self-start focus:outline-none focus:ring focus:ring-indigo-200"
           onClick={toggleAnswer}
         >
           {showAnswer ? (
